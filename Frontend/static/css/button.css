@@ -1,0 +1,38 @@
+.button.button--alter.is-link {
+  border-radius: 24px;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #36f;
+  font-weight: 500;
+}
+
+.btn-rounded {
+  border-radius: 24px;
+}
+
+.button.button--rounded.is-link {
+  border-radius: 100%;
+  background-color: #36f;
+  font-weight: 500;
+}
+
+.intro-buttons {
+  margin-top: 30px;
+}
+
+.intro-buttons a {
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 1rem !important;
+  padding: 25px !important;
+  border-radius: 0 !important;
+}
+
+.intro-buttons a svg {
+  margin-right: 10px;
+}
+
+.intro-buttons a.is-outlined {
+  color: #36f !important;
+  border-color: #36f !important;
+}

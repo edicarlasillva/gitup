@@ -1,0 +1,90 @@
+.grid-projects .box {
+  min-height: 350px;
+  padding: 1.5rem;
+  border-radius: 24px;
+  background-color: #36f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: rgba(65, 60, 77, 0.1) 0px 1rem 1.5rem, rgba(65, 60, 77, 0.05) 0px 0px 2rem;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.grid-projects .box {
+  margin: .75rem;
+}
+
+/* .grid-projects .box:last-child {
+  margin-bottom: 1.5rem;
+} */
+
+.mini-article-author {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.mini-article-author .author-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mini-article-author .author-name {
+  color: #fff;
+}
+
+.mini-article-tags a {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.66rem;
+  white-space: nowrap;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+}
+
+.mini-article-tags a:not(:last-child) {
+  margin-right: 5px;
+}
+
+.mini-article-tags a:hover {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.mini-article-language>span {
+  color: #fff;
+  font-weight: 700;
+}
+
+.mini-article-card-title {
+  margin-bottom: 50px;
+}
+
+.mini-article-card-title h2>a {
+  color: #fff;
+}
+
+.mini-article-tags {
+  margin-top: 20px;
+}
+
+.action-item {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.divider-level---1 {
+  width: 1px;
+  height: 100%;
+  margin-right: 16px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  background-color: #0b0d0c;
+}

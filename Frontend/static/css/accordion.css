@@ -1,0 +1,27 @@
+.links-list > li {
+  margin: 0;
+  position: relative;
+  border: rgba(0,0,0,.1) solid 1px;
+}
+
+.links-list > li > a {
+  padding: 16px 20px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+.links-list > li > a svg {
+  color: rgba(0,0,0,.6);
+  font-size: 20px;
+  width: 30px !important;
+  margin-right: 20px;
+}
+
+
+.links-list > li > a svg.fa-angle-right {
+  width: auto;
+  float: right;
+  margin-top: 3px;
+  margin-right: 0;
+}

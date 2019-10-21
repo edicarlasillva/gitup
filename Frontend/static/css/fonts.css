@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Px Bold';
+    src: url('../fonts/Px-Grotesk-Bold.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Bold.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Bold.ttf') format('ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Px Bold Italic';
+    src: url('../fonts/Px-Grotesk-Bold-Italic.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Bold-Italic.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Bold-Italic.ttf') format('ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Px Light';
+    src: url('../fonts/Px-Grotesk-Light.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Light.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Light.ttf') format('ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Px Regular Italic';
+    src: url('../fonts/Px-Grotesk-Regular-Italic.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Regular-Italic.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Regular-Italic.ttf') format('ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Px Regular';
+    src: url('../fonts/Px-Grotesk-Regular.woff2') format('woff2'),
+    url('../fonts/Px-Grotesk-Regular.woff2') format('woff'),
+    url('../fonts/Px-Grotesk-Regular.ttf') format('ttf');
+    font-weight: 400;
+}

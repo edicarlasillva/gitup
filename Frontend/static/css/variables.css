@@ -1,0 +1,17 @@
+:root {
+  --color-background: rgba(143, 166, 178, .3);
+  --color-primary: 69, 87, 255;
+  --font-size-small: 8px;
+  --font-size-normal: calc(var(--font-size-small) * 1.5);
+  --font-size-medium: calc(var(--font-size-small) * 2);
+  --font-size-large: calc(var(--font-size-small) * 3);
+  --font-size-x-large: calc(var(--font-size-small) * 4);
+  --font-size-xx-large: calc(var(--font-size-small) * 5);
+  --font-primary: normal normal 600 normal var(--font-size-medium) / 1.5 Poppins, sans-serif;
+  --font-secondary: normal normal 400 normal var(--font-size-medium) / 1.5 Lato, sans-serif;
+  --z-index-1: 10;
+  --z-index-2: 20;
+  --z-index-3: 30;
+  --z-index-4: 40;
+  --checkbox-size: 16px;
+}

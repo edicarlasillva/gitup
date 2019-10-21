@@ -1,0 +1,17 @@
+.navigate-page .pagination-list {
+  justify-content: center;
+}
+
+.navigate-page .pagination-link.is-current {
+  background-color: #36f;
+  border-color: #36f;
+}
+
+.navigate-page .pagination.is-rounded .pagination-link {
+  border-radius: 100%;
+}
+
+.navigate-page .pagination-link, .pagination-next, .pagination-previous {
+  border-color: #ebebeb;
+  color: #bbbbbb;
+}
