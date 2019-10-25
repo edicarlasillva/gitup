@@ -343,6 +343,20 @@ h4.title.title--section {
   margin-bottom: 1rem;
 }
 
+.filter-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.filter-item-count {
+  font-weight: 400;
+}
+
 .tag.is-default {
   background: #f1f5f7;
   border-radius: 2rem;

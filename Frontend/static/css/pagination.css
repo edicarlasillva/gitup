@@ -1,4 +1,12 @@
+.pagination {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .navigate-page .pagination-list {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -11,7 +19,16 @@
   border-radius: 100%;
 }
 
-.navigate-page .pagination-link, .pagination-next, .pagination-previous {
+.navigate-page .pagination-link,
+.pagination-next,
+.pagination-previous {
   border-color: #ebebeb;
   color: #bbbbbb;
+}
+
+.pagination.is-rounded .pagination-next:hover,
+.pagination.is-rounded .pagination-previous:hover {
+  background-color: #36f;
+  border-color: #36f;
+  color: #fff !important;
 }
