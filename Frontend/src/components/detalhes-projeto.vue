@@ -22,6 +22,14 @@
             <div class="version" href>
               <span class="is-flex flex-column center">
                 <div>
+                  <strong>Linguagem de programação</strong>
+                </div>
+                <small>{{main_linguagem}}</small>
+              </span>
+            </div>
+            <div class="version" href>
+              <span class="is-flex flex-column center">
+                <div>
                   <strong>Versão</strong>
                 </div>
                 <small>{{main_version}}</small>
@@ -64,24 +72,155 @@
                   <td class="td-description">{{project.nome_projeto}}</td>
                 </tr>
                 <tr>
-                  <td class="td-name">Linguagem</td>
-                  <td class="td-description">{{main_linguagem}}</td>
+                  <td class="td-name">Data de criação</td>
+                  <td class="td-description"></td>
                 </tr>
                 <tr>
                   <td class="td-name">Resumo</td>
                   <td class="td-description">{{resume}}</td>
                 </tr>
                 <tr>
-                  <td class="td-name">Licença</td>
-                  <td class="td-description">{{license}}</td>
+                  <td class="td-name">Descrição</td>
+                  <td class="td-description"></td>
                 </tr>
                 <tr>
-                  <td class="td-name">Monografia</td>
-                  <td class="td-description">Returns the value of a specific field.</td>
+                  <td class="td-name">Categoria</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Palavras-chave</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Sistema operacional</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Site</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Sites antigos</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Página de download</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Lista de discussão</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Rastreador de bugs</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Link das telas</td>
+                  <td class="td-description"></td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 class="title title--section title-table  is-3">
+              <span class="icon-section">
+                <i class="fas fa-info"></i>
+              </span>
+              Versão
+            </h4>
+            <table class="functions-list">
+              <tbody>
+                <tr>
+                  <td class="td-name">Data de lançamento</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Versão</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Descrição</td>
+                  <td class="td-description"></td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 class="title title--section title-table  is-3">
+              <span class="icon-section">
+                <i class="fas fa-info"></i>
+              </span>
+              Repositório
+            </h4>
+            <table class="functions-list">
+              <tbody>
+                <tr>
+                  <td class="td-name">Link do repositório</td>
+                  <td class="td-description">{{git_url}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 class="title title--section title-table  is-3">
+              <span class="icon-section">
+                <i class="fas fa-info"></i>
+              </span>
+              Especificação de implementação
+            </h4>
+            <table class="functions-list">
+              <tbody>
+                <tr>
+                  <td class="td-name">Data de criação</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Resumo</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Descrição</td>
+                  <td class="td-description"></td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 class="title title--section title-table  is-3">
+              <span class="icon-section">
+                <i class="fas fa-info"></i>
+              </span>
+              Monografia
+            </h4>
+            <table class="functions-list">
+              <tbody>
+                <tr>
+                  <td class="td-name">Orientador</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Coorientador</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Idioma</td>
+                  <td class="td-description"></td>
+                </tr>
+                <tr>
+                  <td class="td-name">Link da monografia</td>
+                  <td class="td-description"></td>
                 </tr>
               </tbody>
             </table>
           </article>
+        </div>
+      </div>
+    </section>
+    <!-- Lista de projetos -->
+    <section class="section related-projects">
+      <div class="container">
+        <h4 class="title title--section is-3">
+          <span class="icon-section">
+            <i class="fas fa-code"></i>
+          </span>
+          Projetos relacionados
+        </h4>
+        <div class="grid-projects is-flex columns">
+          <card v-for="item in ListProjects" :key="item.id" :data="item"></card>
+          
         </div>
       </div>
     </section>

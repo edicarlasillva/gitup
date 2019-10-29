@@ -1,3 +1,3 @@
 export default {
-  ENDPOINT_URLL: "http://172.16.0.85:3010/api/v1/gitup"
+  ENDPOINT_URLL: "http://localhost:3000/api/v1/gitup"
 }

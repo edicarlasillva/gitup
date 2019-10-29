@@ -210,6 +210,14 @@ body {
   background-color: #fff;
 }
 
+.related-projects {
+  padding-top: 0 !important;
+}
+
+.title-table {
+  margin-top: 3rem;
+}
+
 .grid-projects,
 .getting-started {
   -ms-flex-wrap: wrap;
