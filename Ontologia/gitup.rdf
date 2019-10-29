@@ -11,8 +11,9 @@
      xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="http://www.gitup.com.br"/>
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:gitup="http://www.gitup.com.br/ontologia/gitup#">
+    <owl:Ontology rdf:about="http://www.gitup.com.br/ontologia/gitup"/>
     
 
 
@@ -120,7 +121,7 @@
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
-        <rdfs:domain rdf:resource="http://www.gitup.com.br#Monografia"/>
+        <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:label xml:lang="pt">discente</rdfs:label>
     </owl:ObjectProperty>
@@ -258,29 +259,29 @@
     
 
 
-    <!-- http://www.gitup.com.br#advisor -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#advisor -->
 
-    <owl:ObjectProperty rdf:about="http://www.gitup.com.br#advisor">
-        <rdfs:domain rdf:resource="http://www.gitup.com.br#Monografia"/>
+    <owl:ObjectProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#advisor">
+        <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:label xml:lang="pt">orientador</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gitup.com.br#author -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#author -->
 
-    <owl:ObjectProperty rdf:about="http://www.gitup.com.br#author">
-        <rdfs:domain rdf:resource="http://www.gitup.com.br#Requirement"/>
+    <owl:ObjectProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#author">
+        <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Requirement"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:label xml:lang="pt">autor do requisito</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gitup.com.br#category -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#category -->
 
-    <owl:ObjectProperty rdf:about="http://www.gitup.com.br#category">
+    <owl:ObjectProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#category">
         <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label xml:lang="pt">categoria</rdfs:label>
@@ -288,21 +289,21 @@
     
 
 
-    <!-- http://www.gitup.com.br#coadvisor -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#coadvisor -->
 
-    <owl:ObjectProperty rdf:about="http://www.gitup.com.br#coadvisor">
-        <rdfs:domain rdf:resource="http://www.gitup.com.br#Monografia"/>
+    <owl:ObjectProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#coadvisor">
+        <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:label xml:lang="pt">coorientador</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.gitup.com.br#requirements -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#requirements -->
 
-    <owl:ObjectProperty rdf:about="http://www.gitup.com.br#requirements">
+    <owl:ObjectProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#requirements">
         <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
-        <rdfs:range rdf:resource="http://www.gitup.com.br#Requirement"/>
+        <rdfs:range rdf:resource="http://www.gitup.com.br/ontologia/gitup#Requirement"/>
         <rdfs:label xml:lang="pt">requisito</rdfs:label>
     </owl:ObjectProperty>
     
@@ -417,7 +418,7 @@
     <!-- http://purl.org/dc/elements/1.1/language -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/language">
-        <rdfs:domain rdf:resource="http://www.gitup.com.br#Monografia"/>
+        <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="pt">idioma da monografia</rdfs:label>
     </owl:DatatypeProperty>
@@ -512,37 +513,37 @@
     
 
 
-    <!-- http://www.gitup.com.br#fileRequirement -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#fileRequirement -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gitup.com.br#fileRequirement">
-        <rdfs:domain rdf:resource="http://www.gitup.com.br#Requirement"/>
+    <owl:DatatypeProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#fileRequirement">
+        <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Requirement"/>
         <rdfs:label xml:lang="pt">documento de requisito</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.gitup.com.br#improvement -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#improvement -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gitup.com.br#improvement">
-        <rdfs:domain rdf:resource="http://www.gitup.com.br#Requirement"/>
+    <owl:DatatypeProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#improvement">
+        <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Requirement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="pt">sugestão de melhoria</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.gitup.com.br#url -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#url -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gitup.com.br#url">
+    <owl:DatatypeProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#url">
         <rdfs:label xml:lang="pt">url</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.gitup.com.br#versionRequirement -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#versionRequirement -->
 
-    <owl:DatatypeProperty rdf:about="http://www.gitup.com.br#versionRequirement">
-        <rdfs:domain rdf:resource="http://www.gitup.com.br#Requirement"/>
+    <owl:DatatypeProperty rdf:about="http://www.gitup.com.br/ontologia/gitup#versionRequirement">
+        <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Requirement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label xml:lang="pt">versão do requisito</rdfs:label>
     </owl:DatatypeProperty>
@@ -632,17 +633,17 @@
     
 
 
-    <!-- http://www.gitup.com.br#Monografia -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia -->
 
-    <owl:Class rdf:about="http://www.gitup.com.br#Monografia">
+    <owl:Class rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
     </owl:Class>
     
 
 
-    <!-- http://www.gitup.com.br#Requirement -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Requirement -->
 
-    <owl:Class rdf:about="http://www.gitup.com.br#Requirement">
+    <owl:Class rdf:about="http://www.gitup.com.br/ontologia/gitup#Requirement">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <rdfs:label xml:lang="pt">Requisito</rdfs:label>
     </owl:Class>
@@ -719,30 +720,30 @@
     
 
 
-    <!-- http://www.gitup.com.br#Allan_dos_Santos_Oliveira -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Allan_dos_Santos_Oliveira">
-        <foaf:currentProject rdf:resource="http://www.gitup.com.br#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
-        <foaf:publications rdf:resource="http://www.gitup.com.br#Monografia_Allan_dos_Santos_Oliveira"/>
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira">
+        <foaf:currentProject rdf:resource="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
+        <foaf:publications rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira"/>
         <foaf:title>Bacharel</foaf:title>
         <foaf:name>Allan dos Santos Oliveira</foaf:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Categoria_Geradores -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Categoria_Geradores">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores">
         <skos:prefLabel>Geradores</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Implementação_Melhoria_do_GuideAutomator -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Implementação_Melhoria_do_GuideAutomator -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Implementação_Melhoria_do_GuideAutomator">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Implementação_Melhoria_do_GuideAutomator">
         <doap:created>15/03/2018</doap:created>
-        <doap:description>Nodejs e npm (Compiler)
+        <doap:description>Nodejs npm (Compiler)
 ImageMagick (Needed for cropping images)
 Wkhtmltopdf (Needed for converting html to pdf)
 Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
@@ -750,16 +751,16 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
-    <!-- http://www.gitup.com.br#Melhoria_do_GuideAutomator -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Melhoria_do_GuideAutomator">
-        <dc11:relation rdf:resource="http://www.gitup.com.br#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
-        <doap:homepage rdf:resource="http://www.gitup.com.br#Site_Melhoria_do_GuideAutomator"/>
-        <doap:implements rdf:resource="http://www.gitup.com.br#Implementação_Melhoria_do_GuideAutomator"/>
-        <doap:maintainer rdf:resource="http://www.gitup.com.br#Welbert_Azevedo_Serra"/>
-        <doap:release rdf:resource="http://www.gitup.com.br#Versão_Melhoria_do_GuideAutomator"/>
-        <doap:repository rdf:resource="http://www.gitup.com.br#Repositório_Melhoria_do_GuideAutomator"/>
-        <category rdf:resource="http://www.gitup.com.br#Categoria_Geradores"/>
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator">
+        <dc11:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
+        <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator"/>
+        <doap:implements rdf:resource="http://www.gitup.com.br/ontologia/gitup#Implementação_Melhoria_do_GuideAutomator"/>
+        <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
+        <doap:release rdf:resource="http://www.gitup.com.br/ontologia/gitup#Versão_Melhoria_do_GuideAutomator"/>
+        <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_Melhoria_do_GuideAutomator"/>
+        <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores"/>
         <dc11:subject>Experimento</dc11:subject>
         <dc11:subject>Geração automática de manuais</dc11:subject>
         <dc11:subject>GuideAutomator</dc11:subject>
@@ -777,81 +778,81 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
-    <!-- http://www.gitup.com.br#Monografia_Allan_dos_Santos_Oliveira -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Monografia_Allan_dos_Santos_Oliveira">
-        <dc11:creator rdf:resource="http://www.gitup.com.br#Allan_dos_Santos_Oliveira"/>
-        <advisor rdf:resource="http://www.gitup.com.br#Rodrigo_Rocha_Gomes_e_Souza"/>
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira">
+        <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
+        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
         <dc11:language>en</dc11:language>
-        <url>https://repositorio.ufba.br/ri/handle/ri/20947</url>
+        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/20947</gitup:url>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Monografia_Welbert_Azevedo_Serra -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Monografia_Welbert_Azevedo_Serra">
-        <dc11:creator rdf:resource="http://www.gitup.com.br#Welbert_Azevedo_Serra"/>
-        <advisor rdf:resource="http://www.gitup.com.br#Rodrigo_Rocha_Gomes_e_Souza"/>
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra">
+        <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
+        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
         <dc11:language>en</dc11:language>
-        <url>https://repositorio.ufba.br/ri/handle/ri/24733</url>
+        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/24733</gitup:url>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Repositório_Melhoria_do_GuideAutomator -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Repositório_Melhoria_do_GuideAutomator -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Repositório_Melhoria_do_GuideAutomator">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Repositório_Melhoria_do_GuideAutomator">
         <doap:browse>https://github.com/aside-ufba/guide-automator</doap:browse>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Rodrigo_Rocha_Gomes_e_Souza -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Rodrigo_Rocha_Gomes_e_Souza">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza">
         <foaf:name>Rodrigo Rocha Gomes e Souza</foaf:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Site_Melhoria_do_GuideAutomator -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Site_Melhoria_do_GuideAutomator">
-        <url>https://www.npmjs.com/package/guide-automator</url>
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator">
+        <gitup:url>https://www.npmjs.com/package/guide-automator</gitup:url>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Versão_Melhoria_do_GuideAutomator -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Versão_Melhoria_do_GuideAutomator -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Versão_Melhoria_do_GuideAutomator">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Versão_Melhoria_do_GuideAutomator">
         <doap:created>15/03/2018</doap:created>
         <doap:revision>2.4.1</doap:revision>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Welbert_Azevedo_Serra -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Welbert_Azevedo_Serra">
-        <foaf:currentProject rdf:resource="http://www.gitup.com.br#Melhoria_do_GuideAutomator"/>
-        <foaf:publications rdf:resource="http://www.gitup.com.br#Monografia_Welbert_Azevedo_Serra"/>
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra">
+        <foaf:currentProject rdf:resource="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator"/>
+        <foaf:publications rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra"/>
         <foaf:title>Bacharel</foaf:title>
         <foaf:name>Welbert Azevedo Serra</foaf:name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
-        <dc11:relation rdf:resource="http://www.gitup.com.br#Melhoria_do_GuideAutomator"/>
-        <doap:homepage rdf:resource="http://www.gitup.com.br#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
-        <doap:maintainer rdf:resource="http://www.gitup.com.br#Allan_dos_Santos_Oliveira"/>
-        <doap:release rdf:resource="http://www.gitup.com.br#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
-        <doap:repository rdf:resource="http://www.gitup.com.br#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
-        <category rdf:resource="http://www.gitup.com.br#Categoria_Geradores"/>
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+        <dc11:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator"/>
+        <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
+        <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
+        <doap:release rdf:resource="http://www.gitup.com.br/ontologia/gitup#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
+        <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
+        <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores"/>
         <dc11:subject>Automation</dc11:subject>
         <dc11:subject>Markdown</dc11:subject>
         <dc11:subject>Selenium</dc11:subject>
@@ -870,9 +871,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
-    <!-- http://www.gitup.com.br#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
         <doap:created>30/01/2017</doap:created>
         <doap:description>Nodejs e npm (Compiler)
 ImageMagick (Needed for cropping images)
@@ -882,25 +883,25 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
-    <!-- http://www.gitup.com.br#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
         <doap:browse>https://github.com/Allan1/guide-automator</doap:browse>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
-        <url>https://www.npmjs.com/package/guide-automator</url>
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+        <gitup:url>https://www.npmjs.com/package/guide-automator</gitup:url>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.gitup.com.br#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
         <doap:created>30/01/2017</doap:created>
         <doap:description>Update dependencies</doap:description>
         <doap:revision>2.2.4</doap:revision>
