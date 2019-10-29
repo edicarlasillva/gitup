@@ -742,7 +742,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Implementação_Melhoria_do_GuideAutomator">
         <doap:created>15/03/2018</doap:created>
-        <doap:description>Nodejs &amp;&amp; npm (Compiler)
+        <doap:description>Nodejs e npm (Compiler)
 ImageMagick (Needed for cropping images)
 Wkhtmltopdf (Needed for converting html to pdf)
 Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
@@ -874,7 +874,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
         <doap:created>30/01/2017</doap:created>
-        <doap:description>Nodejs &amp;&amp; npm (Compiler)
+        <doap:description>Nodejs e npm (Compiler)
 ImageMagick (Needed for cropping images)
 Wkhtmltopdf (Needed for converting html to pdf)
 Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
