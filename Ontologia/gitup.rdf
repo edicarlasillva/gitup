@@ -729,6 +729,17 @@
     
 
 
+    <!-- http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:currentProject rdf:resource="http://www.gitup.com.br/ontologia/gitup#MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula"/>
+        <foaf:title>Bacharel</foaf:title>
+        <foaf:name>Gabriel Assis Erbetta</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.gitup.com.br/ontologia/gitup#Geradores -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Geradores">
@@ -792,6 +803,18 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Gabriel_Assis_Erbetta -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Gabriel_Assis_Erbetta">
+        <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
+        <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta"/>
+        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
+        <dc11:language>pt</dc11:language>
+        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22939</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra">
@@ -818,6 +841,15 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <foaf:name>Rodrigo Rocha Gomes e Souza</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Simuladores -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Simuladores">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Simuladores</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -858,6 +890,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
         <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
         <dc11:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator"/>
         <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
+        <doap:implements rdf:resource="http://www.gitup.com.br/ontologia/gitup#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
         <doap:release rdf:resource="http://www.gitup.com.br/ontologia/gitup#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
@@ -894,6 +927,42 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
+    <!-- http://www.gitup.com.br/ontologia/gitup#Implementação_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Implementação_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Specification"/>
+        <doap:created>08/06/2017</doap:created>
+        <doap:description>Ruby 2.3.1
+Rails 5.0.0
+PostgreSQL</doap:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula"/>
+        <doap:implements rdf:resource="http://www.gitup.com.br/ontologia/gitup#Implementação_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula"/>
+        <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta"/>
+        <doap:old-homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_Antigo_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula"/>
+        <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula"/>
+        <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Simuladores"/>
+        <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula"/>
+        <dc11:subject>Aplicação web</dc11:subject>
+        <dc11:subject>Extração de dados da web</dc11:subject>
+        <dc11:subject>Matrícula</dc11:subject>
+        <dc11:subject>Universidade Federal da Bahia</dc11:subject>
+        <doap:created>08/06/2017</doap:created>
+        <doap:description>A Aplicação web MeuHorário2 tem como objetivo auxiliar os estudantes da UFBA, disponibilizando informações sobre as disciplinas e permitindo a simulação da matrícula antes que ela possa ser feita no sistema acadêmico da universidade.</doap:description>
+        <doap:programming-language>Ruby</doap:programming-language>
+        <doap:shortdesc>Aplicação para simulação da matrícula pelos alunos da UFBA.</doap:shortdesc>
+        <doap:name>MeuHorário 2: uma aplicação web para simulação de matrícula</doap:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
@@ -903,11 +972,38 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
+    <!-- http://www.gitup.com.br/ontologia/gitup#Repositório_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Repositório_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
+        <doap:browse>https://github.com/gabrielerbetta/meuhorario2</doap:browse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Site_Antigo_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_Antigo_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <gitup:url>http://meuhorario.dcc.ufba.br/index2.php</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <gitup:url>https://www.npmjs.com/package/guide-automator</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Site_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <gitup:url>http://meuhorario.dcc.ufba.br</gitup:url>
     </owl:NamedIndividual>
     
 
