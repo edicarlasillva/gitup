@@ -740,9 +740,9 @@
     
 
 
-    <!-- http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Geradores -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Geradores">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>Geradores</skos:prefLabel>
     </owl:NamedIndividual>
@@ -772,7 +772,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
         <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
         <doap:release rdf:resource="http://www.gitup.com.br/ontologia/gitup#Versão_Melhoria_do_GuideAutomator"/>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_Melhoria_do_GuideAutomator"/>
-        <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores"/>
+        <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Geradores"/>
         <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra"/>
         <dc11:subject>Experimento</dc11:subject>
         <dc11:subject>Geração automática de manuais</dc11:subject>
@@ -836,6 +836,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <gitup:url>https://www.npmjs.com/package/guide-automator</gitup:url>
     </owl:NamedIndividual>
     
@@ -872,7 +873,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
         <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
         <doap:release rdf:resource="http://www.gitup.com.br/ontologia/gitup#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
-        <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores"/>
+        <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Geradores"/>
         <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira"/>
         <dc11:subject>Automation</dc11:subject>
         <dc11:subject>Markdown</dc11:subject>
@@ -917,6 +918,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <gitup:url>https://www.npmjs.com/package/guide-automator</gitup:url>
     </owl:NamedIndividual>
     
