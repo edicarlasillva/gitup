@@ -729,6 +729,29 @@
     
 
 
+    <!-- http://www.gitup.com.br/ontologia/gitup#Chordix -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Chordix">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_Chordix"/>
+        <doap:implements rdf:resource="http://www.gitup.com.br/ontologia/gitup#Implementação_Chordix"/>
+        <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus"/>
+        <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_Chordix"/>
+        <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Música"/>
+        <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Tércio_Souza_de_Jesus"/>
+        <dc11:subject>Cifras</dc11:subject>
+        <dc11:subject>Computação musical</dc11:subject>
+        <dc11:subject>Instrumentação vocal</dc11:subject>
+        <dc11:subject>Multiplataforma</dc11:subject>
+        <dc11:subject>Plugins de áudio</dc11:subject>
+        <doap:created>08/06/2017</doap:created>
+        <doap:description>Aplicativo multiplataforma de auto-acompanhamento musical, descrevendo conceitos de teoria musical e ferramentas utilizadas permitindo os usuários executarem acordes musicais a partir de uma cifra musical em formato HTML.</doap:description>
+        <doap:shortdesc>Aplicativo para Auto-Acompanhamento Musical Através de Cifras.</doap:shortdesc>
+        <doap:name>Chordix</doap:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta">
@@ -745,6 +768,16 @@
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Geradores">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>Geradores</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Implementação_Chordix -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Implementação_Chordix">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Specification"/>
+        <doap:created>08/06/2017</doap:created>
+        <doap:description>Implementa a Chordix API localizada no repositório https://github.com/terciodejesus/chordix-api</doap:description>
     </owl:NamedIndividual>
     
 
@@ -815,6 +848,18 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Tércio_Souza_de_Jesus -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Tércio_Souza_de_Jesus">
+        <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
+        <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus"/>
+        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
+        <dc11:language>en</dc11:language>
+        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22942</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra">
@@ -823,6 +868,24 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
         <dc11:language>en</dc11:language>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/24733</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Música -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Música">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Música</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Repositório_Chordix -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Repositório_Chordix">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
+        <doap:browse>https://github.com/terciodejesus/chordix</doap:browse>
     </owl:NamedIndividual>
     
 
@@ -854,11 +917,31 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
+    <!-- http://www.gitup.com.br/ontologia/gitup#Site_Chordix -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_Chordix">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <gitup:url>https://terciodejesus.github.io/chordix</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <gitup:url>https://www.npmjs.com/package/guide-automator</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:currentProject rdf:resource="http://www.gitup.com.br/ontologia/gitup#Chordix"/>
+        <foaf:title>Bacharel</foaf:title>
+        <foaf:name>Tércio Souza de Jesus</foaf:name>
     </owl:NamedIndividual>
     
 
