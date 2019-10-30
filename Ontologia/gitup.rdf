@@ -722,6 +722,7 @@
     <!-- http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <foaf:currentProject rdf:resource="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <foaf:publications rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira"/>
         <foaf:title>Bacharel</foaf:title>
@@ -733,6 +734,7 @@
     <!-- http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Categoria_Geradores">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>Geradores</skos:prefLabel>
     </owl:NamedIndividual>
     
@@ -741,6 +743,7 @@
     <!-- http://www.gitup.com.br/ontologia/gitup#Implementação_Melhoria_do_GuideAutomator -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Implementação_Melhoria_do_GuideAutomator">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Specification"/>
         <doap:created>15/03/2018</doap:created>
         <doap:description>Nodejs npm (Compiler)
 ImageMagick (Needed for cropping images)
@@ -753,6 +756,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
         <dc11:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator"/>
         <doap:implements rdf:resource="http://www.gitup.com.br/ontologia/gitup#Implementação_Melhoria_do_GuideAutomator"/>
@@ -780,6 +784,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira">
+        <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
         <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
         <dc11:language>en</dc11:language>
@@ -791,6 +796,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra">
+        <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
         <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
         <dc11:language>en</dc11:language>
@@ -802,6 +808,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Repositório_Melhoria_do_GuideAutomator -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Repositório_Melhoria_do_GuideAutomator">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
         <doap:browse>https://github.com/aside-ufba/guide-automator</doap:browse>
     </owl:NamedIndividual>
     
@@ -810,6 +817,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <foaf:name>Rodrigo Rocha Gomes e Souza</foaf:name>
     </owl:NamedIndividual>
     
@@ -826,6 +834,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Versão_Melhoria_do_GuideAutomator -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Versão_Melhoria_do_GuideAutomator">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Version"/>
         <doap:created>15/03/2018</doap:created>
         <doap:revision>2.4.1</doap:revision>
     </owl:NamedIndividual>
@@ -835,6 +844,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <foaf:currentProject rdf:resource="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator"/>
         <foaf:publications rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra"/>
         <foaf:title>Bacharel</foaf:title>
@@ -846,6 +856,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
         <dc11:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator"/>
         <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
@@ -873,6 +884,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Specification"/>
         <doap:created>30/01/2017</doap:created>
         <doap:description>Nodejs e npm (Compiler)
 ImageMagick (Needed for cropping images)
@@ -885,6 +897,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
         <doap:browse>https://github.com/Allan1/guide-automator</doap:browse>
     </owl:NamedIndividual>
     
@@ -901,6 +914,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <!-- http://www.gitup.com.br/ontologia/gitup#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Version"/>
         <doap:created>30/01/2017</doap:created>
         <doap:description>Update dependencies</doap:description>
         <doap:revision>2.2.4</doap:revision>
