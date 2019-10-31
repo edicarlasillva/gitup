@@ -753,6 +753,65 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Conversor_RMC -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Conversor_RMC">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <doap:maintainer rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado"/>
+        <doap:repository rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Repositorio_Conversor_RMC"/>
+        <gitup:category rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Conversores"/>
+        <gitup:monografia rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Monografia_Conversor_RMC"/>
+        <dc:subject>Algoritmos de agrupamento</dc:subject>
+        <dc:subject>Arquitetura de software</dc:subject>
+        <dc:subject>Recuperação de arquitetura de software</dc:subject>
+        <doap:created>03/11/2016</doap:created>
+        <doap:description>É um conversor para DSM em HTML desenvolvido para auxiliar na execução de algoritmos utilizados para a recuperação de arquitetura: ACDC, Bunch, LIMBO, MoJo.</doap:description>
+        <doap:programming-language>PHP</doap:programming-language>
+        <doap:shortdesc>Recuperação da arquitetura de software usando algoritmos de agrupamento.</doap:shortdesc>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Conversores -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Conversores">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Conversores</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:currentProject rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Conversor_RMC"/>
+        <foaf:title>Bacharel</foaf:title>
+        <foaf:name>Dennis Lessa Dourado</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Monografia_Conversor_RMC -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Monografia_Conversor_RMC">
+        <dc:creator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado"/>
+        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
+        <dc:language>pt</dc:language>
+        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/20948</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Repositorio_Conversor_RMC -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Repositorio_Conversor_RMC">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
+        <doap:browse>https://github.com/dennislessa/conversor_rmc</doap:browse>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira -->
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira">
@@ -773,7 +832,7 @@
         <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus"/>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_Chordix"/>
         <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Música"/>
-        <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Tércio_Souza_de_Jesus"/>
+        <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Chordix"/>
         <dc:subject>Cifras</dc:subject>
         <dc:subject>Computação musical</dc:subject>
         <dc:subject>Instrumentação vocal</dc:subject>
@@ -841,7 +900,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
         <doap:release rdf:resource="http://www.gitup.com.br/ontologia/gitup#Versão_Melhoria_do_GuideAutomator"/>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_Melhoria_do_GuideAutomator"/>
         <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Geradores"/>
-        <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra"/>
+        <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Melhoria_do_GuideAutomator"/>
         <dc:subject>Experimento</dc:subject>
         <dc:subject>Geração automática de manuais</dc:subject>
         <dc:subject>GuideAutomator</dc:subject>
@@ -859,9 +918,21 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
-    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Chordix -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Chordix">
+        <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
+        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus"/>
+        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
+        <dc:language>en</dc:language>
+        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22942</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_GuideAutomator_Automated_User_Manual_Generation_with_Markdown -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_GuideAutomator_Automated_User_Manual_Generation_with_Markdown">
         <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
         <dc:language>en</dc:language>
@@ -871,38 +942,26 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     
 
 
-    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Gabriel_Assis_Erbetta -->
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Melhoria_do_GuideAutomator -->
 
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Gabriel_Assis_Erbetta">
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Melhoria_do_GuideAutomator">
         <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
-        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:language>pt</dc:language>
-        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22939</gitup:url>
-        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Tércio_Souza_de_Jesus -->
-
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Tércio_Souza_de_Jesus">
-        <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
-        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:language>en</dc:language>
-        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22942</gitup:url>
-        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra -->
-
-    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra">
-        <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
+        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
         <dc:language>en</dc:language>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/24733</gitup:url>
-        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.gitup.com.br/ontologia/gitup#Monografia_MeuHorário_2_uma_aplicação_web_para_simulação_de_matrícula -->
+
+    <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_MeuHorário_2_uma_aplicação_web_para_simulação_de_matrícula">
+        <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
+        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta"/>
+        <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
+        <dc:language>pt</dc:language>
+        <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22939</gitup:url>
     </owl:NamedIndividual>
     
 
@@ -1013,7 +1072,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
         <doap:release rdf:resource="http://www.gitup.com.br/ontologia/gitup#Versão_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Geradores"/>
-        <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira"/>
+        <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_GuideAutomator_Automated_User_Manual_Generation_with_Markdown"/>
         <dc:subject>Automation</dc:subject>
         <dc:subject>Markdown</dc:subject>
         <dc:subject>Selenium</dc:subject>
