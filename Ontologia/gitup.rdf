@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.gitup.com.br#"
      xml:base="http://www.gitup.com.br"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:www="http://www.gitup.com.br#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:dc11="http://purl.org/dc/elements/1.1/"
      xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:gitup="http://www.gitup.com.br/ontologia/gitup#">
     <owl:Ontology rdf:about="http://www.gitup.com.br/ontologia/gitup">
-        <dc11:creator>Edicarla Conceição da Silva</dc11:creator>
-        <dc11:description>Um framework baseado em ontologias linked data para descrever projetos de software.</dc11:description>
-        <dc11:rights>Copyright © 2019 Edicarla Conceição da Silva</dc11:rights>
-        <dc11:title>Um framework baseado em ontologias linked data para repositório de projetos de software</dc11:title>
+        <dc:creator>Edicarla Conceição da Silva</dc:creator>
+        <dc:description>Um framework baseado em ontologias linked data para descrever projetos de software.</dc:description>
+        <dc:rights>Copyright © 2019 Edicarla Conceição da Silva</dc:rights>
+        <dc:title>Um framework baseado em ontologias linked data para repositório de projetos de software</dc:title>
     </owl:Ontology>
     
 
@@ -34,7 +34,9 @@
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -156,7 +158,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:domain rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:ObjectProperty>
     
 
@@ -773,11 +774,11 @@
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_Chordix"/>
         <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Música"/>
         <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Tércio_Souza_de_Jesus"/>
-        <dc11:subject>Cifras</dc11:subject>
-        <dc11:subject>Computação musical</dc11:subject>
-        <dc11:subject>Instrumentação vocal</dc11:subject>
-        <dc11:subject>Multiplataforma</dc11:subject>
-        <dc11:subject>Plugins de áudio</dc11:subject>
+        <dc:subject>Cifras</dc:subject>
+        <dc:subject>Computação musical</dc:subject>
+        <dc:subject>Instrumentação vocal</dc:subject>
+        <dc:subject>Multiplataforma</dc:subject>
+        <dc:subject>Plugins de áudio</dc:subject>
         <doap:created>08/06/2017</doap:created>
         <doap:description>Aplicativo multiplataforma de auto-acompanhamento musical, descrevendo conceitos de teoria musical e ferramentas utilizadas permitindo os usuários executarem acordes musicais a partir de uma cifra musical em formato HTML.</doap:description>
         <doap:shortdesc>Aplicativo para Auto-Acompanhamento Musical Através de Cifras.</doap:shortdesc>
@@ -833,7 +834,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator">
         <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
-        <dc11:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
+        <dc:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_Melhoria_do_GuideAutomator"/>
         <doap:implements rdf:resource="http://www.gitup.com.br/ontologia/gitup#Implementação_Melhoria_do_GuideAutomator"/>
         <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
@@ -841,10 +842,10 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_Melhoria_do_GuideAutomator"/>
         <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Geradores"/>
         <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra"/>
-        <dc11:subject>Experimento</dc11:subject>
-        <dc11:subject>Geração automática de manuais</dc11:subject>
-        <dc11:subject>GuideAutomator</dc11:subject>
-        <dc11:subject>Manual de usuário</dc11:subject>
+        <dc:subject>Experimento</dc:subject>
+        <dc:subject>Geração automática de manuais</dc:subject>
+        <dc:subject>GuideAutomator</dc:subject>
+        <dc:subject>Manual de usuário</dc:subject>
         <doap:created>06/17/2017</doap:created>
         <doap:description>O GuideAutomator é uma ferramenta que utiliza texto e código-fonte para, de maneira auto- matizada, documentar um sistema web através de capturas de tela.</doap:description>
         <doap:language>en</doap:language>
@@ -862,10 +863,10 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira">
         <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
-        <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc11:language>en</dc11:language>
+        <dc:language>en</dc:language>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/20947</gitup:url>
+        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
     </owl:NamedIndividual>
     
 
@@ -874,10 +875,10 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Gabriel_Assis_Erbetta">
         <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
-        <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta"/>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc11:language>pt</dc11:language>
+        <dc:language>pt</dc:language>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22939</gitup:url>
+        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Gabriel_Assis_Erbetta"/>
     </owl:NamedIndividual>
     
 
@@ -886,10 +887,10 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Tércio_Souza_de_Jesus">
         <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
-        <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus"/>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc11:language>en</dc11:language>
+        <dc:language>en</dc:language>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22942</gitup:url>
+        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Tércio_Souza_de_Jesus"/>
     </owl:NamedIndividual>
     
 
@@ -898,10 +899,10 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#Monografia_Welbert_Azevedo_Serra">
         <rdf:type rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia"/>
-        <dc11:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
         <gitup:advisor rdf:resource="http://www.gitup.com.br/ontologia/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc11:language>en</dc11:language>
+        <dc:language>en</dc:language>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/24733</gitup:url>
+        <dc:creator rdf:resource="http://www.gitup.com.br/ontologia/gitup#Welbert_Azevedo_Serra"/>
     </owl:NamedIndividual>
     
 
@@ -1005,7 +1006,7 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
 
     <owl:NamedIndividual rdf:about="http://www.gitup.com.br/ontologia/gitup#GuideAutomator:_Automated_User_Manual_Generation_with_Markdown">
         <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
-        <dc11:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator"/>
+        <dc:relation rdf:resource="http://www.gitup.com.br/ontologia/gitup#Melhoria_do_GuideAutomator"/>
         <doap:homepage rdf:resource="http://www.gitup.com.br/ontologia/gitup#Site_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:implements rdf:resource="http://www.gitup.com.br/ontologia/gitup#Implementação_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <doap:maintainer rdf:resource="http://www.gitup.com.br/ontologia/gitup#Allan_dos_Santos_Oliveira"/>
@@ -1013,11 +1014,11 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_GuideAutomator:_Automated_User_Manual_Generation_with_Markdown"/>
         <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Geradores"/>
         <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#Monografia_Allan_dos_Santos_Oliveira"/>
-        <dc11:subject>Automation</dc11:subject>
-        <dc11:subject>Markdown</dc11:subject>
-        <dc11:subject>Selenium</dc11:subject>
-        <dc11:subject>User guide</dc11:subject>
-        <dc11:subject>User manual</dc11:subject>
+        <dc:subject>Automation</dc:subject>
+        <dc:subject>Markdown</dc:subject>
+        <dc:subject>Selenium</dc:subject>
+        <dc:subject>User guide</dc:subject>
+        <dc:subject>User manual</dc:subject>
         <doap:created>03/11/2016</doap:created>
         <doap:description>O GuideAutomator é uma ferramenta que permite essa automatização através da escrita de documentos na sintáxe Markdown e do encapsulamento do Selenium Web Driver.</doap:description>
         <doap:language>en</doap:language>
@@ -1067,10 +1068,10 @@ PostgreSQL</doap:description>
         <doap:repository rdf:resource="http://www.gitup.com.br/ontologia/gitup#Repositório_MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula"/>
         <gitup:category rdf:resource="http://www.gitup.com.br/ontologia/gitup#Simuladores"/>
         <gitup:monografia rdf:resource="http://www.gitup.com.br/ontologia/gitup#MeuHorário_2:_uma_aplicação_web_para_simulação_de_matrícula"/>
-        <dc11:subject>Aplicação web</dc11:subject>
-        <dc11:subject>Extração de dados da web</dc11:subject>
-        <dc11:subject>Matrícula</dc11:subject>
-        <dc11:subject>Universidade Federal da Bahia</dc11:subject>
+        <dc:subject>Aplicação web</dc:subject>
+        <dc:subject>Extração de dados da web</dc:subject>
+        <dc:subject>Matrícula</dc:subject>
+        <dc:subject>Universidade Federal da Bahia</dc:subject>
         <doap:created>08/06/2017</doap:created>
         <doap:description>A Aplicação web MeuHorário2 tem como objetivo auxiliar os estudantes da UFBA, disponibilizando informações sobre as disciplinas e permitindo a simulação da matrícula antes que ela possa ser feita no sistema acadêmico da universidade.</doap:description>
         <doap:programming-language>Ruby</doap:programming-language>
