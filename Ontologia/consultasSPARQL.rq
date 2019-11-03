@@ -1,0 +1,129 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX doap: <http://usefulinc.com/ns/doap#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX gitup: <http://ontologia.gitup.com.br:8890/gitup#>
+
+# Consulta que retorna os projetos(?project), ordenados por data(DESC), trazendo:
+# nome do projeto(?name),
+# data de criação do projeto(?created),
+# linguagem de programação do projeto(?programmingLanguage),
+# nome do desenvolvedor líder do projeto(?nameMaintainer).
+SELECT distinct ?name ?created ?programmingLanguage ?nameMaintainer 
+WHERE {
+  ?project doap:name ?name.
+  ?project doap:created ?created .
+  ?project doap:programming-language ?programmingLanguage .
+  ?project doap:maintainer ?maintainer .
+  ?maintainer foaf:name ?nameMaintainer .
+}
+ORDER BY DESC(?created)
+
+
+# Consulta que retorna as palavras-chaves(?keywords) dos projetos(?project), trazendo:
+# nome do projeto(?name),
+# palavras-chave do projeto(?keywords)
+SELECT distinct ?name ?keywords
+WHERE 
+{
+  ?project doap:name ?name.
+  ?project dc:subject ?keywords .
+}
+ORDER BY DESC(?name)
+
+
+# Consulta que retorna os projetos(?project) a partir da busca por palavra-chave(?keywords), trazendo:
+# nome do projeto(?name),
+# linguagem de programação(?programmingLanguage),
+# nome do desenvolvedor líder do projeto(?nameMaintainer).
+SELECT distinct ?name ?created?programmingLanguage ?nameMaintainer
+WHERE 
+{
+  ?project doap:name ?name.
+  ?project doap:programming-language ?programmingLanguage .
+  ?project doap:maintainer ?maintainer .
+  ?maintainer foaf:name ?nameMaintainer .
+  ?project dc:subject ?keywords .
+  ?project doap:created ?created .
+  Filter REGEX(?keywords , 'Experimento.*' , 'i')
+}
+
+
+
+
+https://www.youtube.com/watch?v=brsupli-X28
+https://stackoverflow.com/questions/11070558/matching-of-strings-in-sparql
+http://jena.apache.org/tutorials/sparql_filters.html
+
+
+
+
+SELECT distinct ?name ?created ?shortdesc ?description ?homepage ?oldHomepage ?downloadPage ?mailingList ?bugDatabase ?screenshots ?linkRepository ?license
+WHERE
+{
+  ?project doap:name ?name .
+  ?project doap:created ?created .
+  OPTIONAL { ?project doap:shortdesc ?shortdesc }
+  OPTIONAL { ?project doap:description ?description }
+  OPTIONAL { ?project doap:homepage ?homepage }
+  OPTIONAL { ?project doap:old-homepage ?oldHomepage }
+  OPTIONAL { ?project doap:download-page ?downloadPage }
+  OPTIONAL { ?project doap:mailing-list ?mailingList }
+  OPTIONAL { ?project doap:bug-database ?bugDatabase }
+  OPTIONAL { ?project doap:screenshots ?screenshots }
+  OPTIONAL { ?project doap:license ?license }
+  {
+    SELECT ?linkRepository
+    { 
+      ?repository doap:browse ?linkRepository . 
+    }
+  }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+
+                
+SELECT distinct ?name ?os
+WHERE 
+{
+  ?project doap:name ?name.
+  ?project doap:os ?os .
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+ORDER BY DESC(?os)
+
+
+SELECT distinct ?name ?linkRepository
+WHERE 
+{
+  ?project doap:name ?name.
+  ?project doap:repository ?repository .
+  ?repository doap:browse ?linkRepository.
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+} 
+
+
+
+SELECT distinct ?name ?nameProject ?programmingLanguage ?nameMaintainer 
+WHERE 
+{
+  ?project doap:name ?name.
+  ?project dc:relation ?relation .
+  ?relation doap:name ?nameProject .
+  ?relation doap:programming-language ?programmingLanguage .
+  ?relation doap:maintainer ?maintainer .
+  ?maintainer foaf:name ?nameMaintainer .
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+ORDER BY DESC(?name)
+
+
+SELECT distinct ?name ?revision ?created ?description
+WHERE 
+{
+  ?project doap:name ?name .
+  OPTIONAL { ?project doap:release ?version }
+  OPTIONAL { ?version doap:revision ?revision }
+  OPTIONAL { ?version doap:created ?created }
+  OPTIONAL { ?version doap:description ?description }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+} 
