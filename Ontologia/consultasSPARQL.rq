@@ -9,13 +9,14 @@ PREFIX gitup: <http://ontologia.gitup.com.br:8890/gitup#>
 # data de criação do projeto(?created),
 # linguagem de programação do projeto(?programmingLanguage),
 # nome do desenvolvedor líder do projeto(?nameMaintainer).
-SELECT distinct ?name ?created ?programmingLanguage ?nameMaintainer 
+SELECT distinct ?name ?created ?programmingLanguage ?nameCreator 
 WHERE {
   ?project doap:name ?name.
   ?project doap:created ?created .
   ?project doap:programming-language ?programmingLanguage .
-  ?project doap:maintainer ?maintainer .
-  ?maintainer foaf:name ?nameMaintainer .
+  ?project gitup:monografia ?monografia .
+  ?monografia dc:creator ?creator .
+  ?creator foaf:name ?nameCreator .
 }
 ORDER BY DESC(?created)
 
@@ -36,83 +37,21 @@ ORDER BY DESC(?name)
 # nome do projeto(?name),
 # linguagem de programação(?programmingLanguage),
 # nome do desenvolvedor líder do projeto(?nameMaintainer).
-SELECT distinct ?name ?created?programmingLanguage ?nameMaintainer
+SELECT distinct ?name ?created ?programmingLanguage ?nameCreator
 WHERE 
 {
   ?project doap:name ?name.
   ?project doap:programming-language ?programmingLanguage .
-  ?project doap:maintainer ?maintainer .
-  ?maintainer foaf:name ?nameMaintainer .
+  ?project gitup:monografia ?monografia .
+  ?monografia dc:creator ?creator .
+  ?creator foaf:name ?nameCreator .
   ?project dc:subject ?keywords .
   ?project doap:created ?created .
   Filter REGEX(?keywords , 'Experimento.*' , 'i')
 }
 
 
-
-
-https://www.youtube.com/watch?v=brsupli-X28
-https://stackoverflow.com/questions/11070558/matching-of-strings-in-sparql
-http://jena.apache.org/tutorials/sparql_filters.html
-
-
-
-
-SELECT distinct ?name ?created ?shortdesc ?description ?homepage ?oldHomepage ?downloadPage ?mailingList ?bugDatabase ?screenshots ?linkRepository ?license
-WHERE
-{
-  ?project doap:name ?name .
-  ?project doap:created ?created .
-  OPTIONAL { ?project doap:shortdesc ?shortdesc }
-  OPTIONAL { ?project doap:description ?description }
-  OPTIONAL { ?project doap:homepage ?homepage }
-  OPTIONAL { ?project doap:old-homepage ?oldHomepage }
-  OPTIONAL { ?project doap:download-page ?downloadPage }
-  OPTIONAL { ?project doap:mailing-list ?mailingList }
-  OPTIONAL { ?project doap:bug-database ?bugDatabase }
-  OPTIONAL { ?project doap:screenshots ?screenshots }
-  OPTIONAL { ?project doap:license ?license }
-  {
-    SELECT ?linkRepository
-    { 
-      ?repository doap:browse ?linkRepository . 
-    }
-  }
-  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
-}
-
-SELECT distinct ?name ?created ?shortdesc ?description ?urlHomepage ?urlOldHomepage ?downloadPage ?urlMailingList ?bugDatabase ?screenshots ?license
-WHERE
-{
-  ?project doap:name ?name .
-  ?project doap:created ?created .
-  OPTIONAL { ?project doap:shortdesc ?shortdesc }
-  OPTIONAL { ?project doap:description ?description }
-  OPTIONAL { ?project doap:homepage ?homepage }
-  OPTIONAL { ?homepage gitup:url ?urlHomepage }
-  OPTIONAL { ?project doap:old-homepage ?oldHomepage }
-  OPTIONAL { ?oldHomepage gitup:url ?urlOldHomepage }
-  OPTIONAL { ?project doap:download-page ?downloadPage }
-  OPTIONAL { ?project doap:mailing-list ?mailingList }
-  OPTIONAL { ?mailingList gitup:url ?urlMailingList }
-  OPTIONAL { ?project doap:bug-database ?bugDatabase }
-  OPTIONAL { ?project doap:screenshots ?screenshots }
-  OPTIONAL { ?project doap:license ?license }
-
-  Filter REGEX(?name , 'MeuHorário 2: uma aplicação web para simulação de matrícula' , 'i')
-}
-
-                
-SELECT distinct ?name ?os
-WHERE 
-{
-  ?project doap:name ?name.
-  ?project doap:os ?os .
-  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
-}
-ORDER BY DESC(?os)
-
-
+# Repositório 
 SELECT distinct ?name ?linkRepository
 WHERE 
 {
@@ -123,7 +62,7 @@ WHERE
 } 
 
 
-
+# Projetos relacionados
 SELECT distinct ?name ?nameProject ?programmingLanguage ?nameMaintainer 
 WHERE 
 {
@@ -138,10 +77,92 @@ WHERE
 ORDER BY DESC(?name)
 
 
+#Monografia
+SELECT distinct ?name ?nameCreator ?advisorName ?coadvisorName ?language ?linkMonografia
+WHERE 
+{
+  ?project doap:name ?name ;
+           gitup:monografia ?monografia .
+
+  ?monografia gitup:url ?linkMonografia ;
+              gitup:advisor ?advisor .
+
+  ?advisor  foaf:name ?advisorName .
+  OPTIONAL 
+  { 
+    ?monografia gitup:coadvisor ?coadvisor .
+    ?coadvisor  foaf:name ?coadvisorName
+  }
+  OPTIONAL 
+  { 
+    ?monografia dc:creator ?creator .
+    ?creator  foaf:name ?nameCreator
+  }
+  OPTIONAL 
+  { 
+    ?monografia dc:language ?language
+  }
+
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+
+# Especificação 
+SELECT distinct ?name ?created ?description
+WHERE 
+{
+  ?project doap:name ?name .
+
+  OPTIONAL 
+  { 
+    ?project doap:implements ?implements .
+    ?implements doap:created ?created .
+    ?implements doap:description ?description
+  }
+
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+} 
+
+#Categoria
+SELECT distinct ?name ?prefLabel ?altfLabel ?narrower ?broader ?related
+WHERE 
+{
+  ?project doap:name ?name.
+
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category .
+    ?category skos:prefLabel ?prefLabel .
+  }
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category .
+    ?category skos:altLabel ?altfLabel .
+  }
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category .
+    ?category skos:narrower ?narrower .
+  }
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category .
+    ?category skos:broader ?broader .
+  }
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category .
+    ?category skos:related ?related .
+  }
+
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+
+# Versão
 SELECT distinct ?name ?revision ?created ?description
 WHERE 
 {
   ?project doap:name ?name .
+  
   OPTIONAL { ?project doap:release ?version }
   OPTIONAL { ?version doap:revision ?revision }
   OPTIONAL { ?version doap:created ?created }
@@ -149,27 +170,146 @@ WHERE
   Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
 } 
 
+# Detalhes do projeto
+SELECT distinct 
+  ?name 
+  ?created 
+  ?shortdesc 
+  ?description 
+  ?urlHomepage 
+  ?urlOldHomepage 
+  ?downloadPage 
+  ?urlMailingList 
+  ?bugDatabase 
+  ?screenshots 
+  ?license 
+  ?programmingLanguage 
+  ?nameMaintainer 
+  ?nameDeveloper 
+  ?nameDocumenter 
+  ?nameTranslator 
+  ?nameHelper 
+  ?nameTester
+  ?language
+WHERE
+{
+  ?project doap:name ?name .
+  ?project doap:created ?created .
+  ?project doap:programming-language ?programmingLanguage .
+  ?project doap:maintainer ?maintainer .
+  ?maintainer foaf:name ?nameMaintainer .
+  OPTIONAL { ?project doap:language ?language }
 
+  OPTIONAL
+  {
+    ?project doap:developer ?developer .
+    ?developer foaf:name ?nameDeveloper .
+  }
+  OPTIONAL
+  {
+    ?project doap:documenter ?documenter .
+    ?documenter foaf:name ?nameDocumenter .
+  }
+  OPTIONAL
+  {
+    ?project doap:translator ?translator .
+    ?translator foaf:name ?nameTranslator .
+  }
+  OPTIONAL
+  {
+    ?project doap:helper ?helper .
+    ?helper foaf:name ?nameHelper .
+  }
+  OPTIONAL
+  {
+    ?project doap:tester ?tester .
+    ?tester foaf:name ?nameTester .
+  }
+  OPTIONAL { ?project doap:shortdesc ?shortdesc }
+  OPTIONAL { ?project doap:description ?description }
+  OPTIONAL 
+  { 
+    ?project doap:homepage ?homepage .
+    ?homepage gitup:url ?urlHomepage .
+  }
+  OPTIONAL 
+  { 
+    ?project doap:old-homepage ?oldHomepage .
+    ?oldHomepage gitup:url ?urlOldHomepage .
+  }
+  OPTIONAL { ?project doap:download-page ?downloadPage }
+  OPTIONAL 
+  { 
+    ?project doap:mailing-list ?mailingList .
+    ?mailingList gitup:url ?urlMailingList .
+  }
+  OPTIONAL { ?project doap:bug-database ?bugDatabase }
+  OPTIONAL { ?project doap:screenshots ?screenshots }
+  OPTIONAL { ?project doap:license ?license }
 
-SELECT distinct ?name ?prefLabel ?altfLabel ?narrower ?broader ?related
+  Filter REGEX(?name , 'MeuHorário 2: uma aplicação web para simulação de matrícula' , 'i')
+}
+
+# Sistema operacional
+SELECT distinct ?name ?os
 WHERE 
 {
   ?project doap:name ?name.
-  OPTIONAL { ?project gitup:category ?category }
-  OPTIONAL { ?category skos:prefLabel ?prefLabel }
-  OPTIONAL { ?category skos:altLabel ?altfLabel }
-  OPTIONAL { ?category skos:narrower ?narrower }
-  OPTIONAL { ?category skos:broader ?broader }
-  OPTIONAL { ?category skos:related ?related }
+  OPTIONAL {?project doap:os ?os }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+ORDER BY DESC(?os)
+
+# Requisito
+SELECT distinct ?name ?requirements ?nameAuthor
+WHERE 
+{
+  ?project doap:name ?name ;
+           gitup:requirements ?requirements .
+
+  OPTIONAL 
+  {
+      ?requirements gitup:author ?author .
+      ?author foaf:name ?nameAuthor .
+  }
+
+  OPTIONAL 
+  { 
+    ?monografia gitup:coadvisor ?coadvisor .
+    ?coadvisor  foaf:name ?coadvisorName
+  }
+  OPTIONAL 
+  { 
+    ?monografia dc:creator ?creator .
+    ?creator  foaf:name ?nameCreator
+  }
+  OPTIONAL 
+  { 
+    ?monografia dc:language ?language
+  }
+
   Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
 }
 
-SELECT distinct ?name ?created ?description
+
+# Consulta filtro
+SELECT distinct ?name ?keywords ?programmingLanguage ?prefLabel ?nameCreator
 WHERE 
 {
-  ?project doap:name ?name .
-  OPTIONAL { ?project doap:implements ?implements }
-  OPTIONAL { ?implements doap:created ?created }
-  OPTIONAL { ?implements doap:description ?description }
-  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
-} 
+  ?project doap:name ?name.
+  ?project dc:subject ?keywords .
+  ?project doap:programming-language ?programmingLanguage .
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category .
+    ?category skos:prefLabel ?prefLabel .
+  }
+  OPTIONAL 
+  { 
+    ?project gitup:monografia ?monografia .
+    ?monografia dc:creator ?creator .
+    ?creator  foaf:name ?nameCreator .
+  }
+  Filter REGEX(?keywords , 'Experimento.*' , 'i')
+}
+ORDER BY DESC(?name)

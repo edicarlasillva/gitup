@@ -2,7 +2,7 @@
   <section class="search-content" :class="{'is-paddingless':PaddingCss}">
     <div class="container">
       <div class="search">
-        <input type="text" @keydown.enter="Search" placeholder="Procurar por projetos" v-model="searchQuery"/>
+        <input type="text"  @keydown.enter="Search" placeholder="Procurar por projetos" v-model="searchQuery"/>
         <button class="button button--rounded is-link" @click="Search">
           <span class="icon">
             <i class="fas fa-arrow-right"></i>
@@ -44,6 +44,13 @@ export default {
       }
       
     }
+  },
+   beforeRouteUpdate(to,from,next){
+     next()
+     this.searchQuery = this.$route.query.q
+  },
+  mounted(){
+    this.searchQuery = this.$route.query.q
   }
 };
 </script>

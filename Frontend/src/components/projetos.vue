@@ -4,7 +4,7 @@
       <div class="hero-body">
         <div class="container">
           <div class="wrap-search">
-            <busca padding="true" @search-projects="List" busca-home="false"></busca>
+            <busca padding="true"  @search-projects="List" busca-home="false"></busca>
           </div>
         </div>
       </div>
@@ -127,9 +127,11 @@
               </span>
             </div>
             <div class="grid-projects is-flex columns">
-              <card v-for="item in ListProjects" :key="item.id" :data="item"></card>
+              <h3 v-if="ListProjects.length == 0">Não foram encontrados projetos para sua busca.</h3>
+              <card v-else v-for="item in ListProjects" :key="item.id" :data="item"></card>
+
             </div>
-            <div class="navigate-page">
+            <div class="navigate-page" v-if="ListProjects.length > 0">
               <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
                 <a class="pagination-previous">Anterior</a>
                 <a class="pagination-next">Próximo</a>
@@ -156,7 +158,8 @@ export default {
     return {
       ListProjects: [],
       isLoading: false,
-      fullPage: true
+      fullPage: true,
+      SearchValue:''
     };
   },
   components: {
@@ -169,16 +172,23 @@ export default {
   methods: {
     List() {
       this.isLoading = true;
-      Axios.get(config.ENDPOINT_URLL + "/search?q=" + this.$route.query.q).then(
+      Axios.get(config.ENDPOINT_URLL + "projects/search/" + this.$route.query.q).then(
         response => {
           this.isLoading = false;
-          this.ListProjects = response.data;
+          this.ListProjects = response.data.data;
         }
       );
     }
   },
+  beforeRouteUpdate(to,from,next){
+     next()
+     window.scrollTo(scrollY,0)
+     this.$children[0].searchQuery = this.$route.query.q 
+     this.List()
+  },
   mounted() {
     this.List();
+    console.log(this.$children[0].searchQuery = this.$route.query.q )
   }
 };
 </script>

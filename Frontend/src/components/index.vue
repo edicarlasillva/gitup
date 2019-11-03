@@ -110,9 +110,11 @@ export default {
   methods:{
      ListLastProjects(){
         this.isLoading = true
-        Axios.get(config.ENDPOINT_URLL+"/last-projects").then(response=>{
+        Axios.get(config.ENDPOINT_URLL+"projects/last").then(response=>{
             this.isLoading = false
-            this.ListProjects = response.data
+            this.ListProjects = response.data.data
+        }).catch(error=>{
+            alert(error.response.data.message)
         })
      }
   },
