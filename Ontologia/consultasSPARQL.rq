@@ -81,6 +81,27 @@ WHERE
   Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
 }
 
+SELECT distinct ?name ?created ?shortdesc ?description ?urlHomepage ?urlOldHomepage ?downloadPage ?urlMailingList ?bugDatabase ?screenshots ?license
+WHERE
+{
+  ?project doap:name ?name .
+  ?project doap:created ?created .
+  OPTIONAL { ?project doap:shortdesc ?shortdesc }
+  OPTIONAL { ?project doap:description ?description }
+  OPTIONAL { ?project doap:homepage ?homepage }
+  OPTIONAL { ?homepage gitup:url ?urlHomepage }
+  OPTIONAL { ?project doap:old-homepage ?oldHomepage }
+  OPTIONAL { ?oldHomepage gitup:url ?urlOldHomepage }
+  OPTIONAL { ?project doap:download-page ?downloadPage }
+  OPTIONAL { ?project doap:mailing-list ?mailingList }
+  OPTIONAL { ?mailingList gitup:url ?urlMailingList }
+  OPTIONAL { ?project doap:bug-database ?bugDatabase }
+  OPTIONAL { ?project doap:screenshots ?screenshots }
+  OPTIONAL { ?project doap:license ?license }
+
+  Filter REGEX(?name , 'MeuHorário 2: uma aplicação web para simulação de matrícula' , 'i')
+}
+
                 
 SELECT distinct ?name ?os
 WHERE 
@@ -125,5 +146,30 @@ WHERE
   OPTIONAL { ?version doap:revision ?revision }
   OPTIONAL { ?version doap:created ?created }
   OPTIONAL { ?version doap:description ?description }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+} 
+
+
+
+SELECT distinct ?name ?prefLabel ?altfLabel ?narrower ?broader ?related
+WHERE 
+{
+  ?project doap:name ?name.
+  OPTIONAL { ?project gitup:category ?category }
+  OPTIONAL { ?category skos:prefLabel ?prefLabel }
+  OPTIONAL { ?category skos:altLabel ?altfLabel }
+  OPTIONAL { ?category skos:narrower ?narrower }
+  OPTIONAL { ?category skos:broader ?broader }
+  OPTIONAL { ?category skos:related ?related }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+
+SELECT distinct ?name ?created ?description
+WHERE 
+{
+  ?project doap:name ?name .
+  OPTIONAL { ?project doap:implements ?implements }
+  OPTIONAL { ?implements doap:created ?created }
+  OPTIONAL { ?implements doap:description ?description }
   Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
 } 

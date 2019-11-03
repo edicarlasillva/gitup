@@ -217,7 +217,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
         <rdfs:domain rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     </owl:ObjectProperty>
     
 
@@ -286,6 +285,7 @@
     <!-- http://usefulinc.com/ns/doap#mailing-list -->
 
     <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#mailing-list">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
         <rdfs:range rdf:resource="http://rdfs.org/sioc/types#MailingList"/>
         <rdfs:label xml:lang="pt">lista de discussão</rdfs:label>
@@ -307,6 +307,7 @@
 
     <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#old-homepage">
         <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
         <rdfs:label xml:lang="pt">site antigo</rdfs:label>
     </owl:ObjectProperty>
@@ -864,9 +865,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://ontologia.gitup.com.br:8890/gitup#Monografia_Chordix">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Tércio_Souza_de_Jesus"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22942</gitup:url>
         <dc:language>en</dc:language>
+        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Tércio_Souza_de_Jesus"/>
     </owl:NamedIndividual>
     
 
@@ -876,9 +877,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://ontologia.gitup.com.br:8890/gitup#Monografia_GuideAutomator_Automated_User_Manual_Generation_with_Markdown">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Allan_dos_Santos_Oliveira"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/20947</gitup:url>
         <dc:language>en</dc:language>
+        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Allan_dos_Santos_Oliveira"/>
     </owl:NamedIndividual>
     
 
@@ -888,9 +889,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://ontologia.gitup.com.br:8890/gitup#Monografia_Melhoria_do_GuideAutomator">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Welbert_Azevedo_Serra"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/24733</gitup:url>
         <dc:language>en</dc:language>
+        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Welbert_Azevedo_Serra"/>
     </owl:NamedIndividual>
     
 
@@ -900,9 +901,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://ontologia.gitup.com.br:8890/gitup#Monografia_MeuHorário_2_uma_aplicação_web_para_simulação_de_matrícula">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Gabriel_Assis_Erbetta"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22939</gitup:url>
         <dc:language>pt</dc:language>
+        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Gabriel_Assis_Erbetta"/>
     </owl:NamedIndividual>
     
 
@@ -1182,9 +1183,9 @@ PostgreSQL</doap:description>
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Monografia_Conversor_RMC">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/20948</gitup:url>
         <dc:language>pt</dc:language>
+        <dc:creator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado"/>
     </owl:NamedIndividual>
     
 
