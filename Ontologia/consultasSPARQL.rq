@@ -12,7 +12,7 @@ PREFIX gitup: <http://ontologia.gitup.com.br:8890/gitup#>
 # nome do desenvolvedor líder do projeto(?nameMaintainer).
 SELECT distinct ?name ?created ?programmingLanguage ?nameCreator 
 WHERE {
-  ?project doap:name ?name.
+  ?project doap:name ?name .
   ?project doap:created ?created .
   ?project doap:programming-language ?programmingLanguage .
   ?project gitup:monografia ?monografia .
