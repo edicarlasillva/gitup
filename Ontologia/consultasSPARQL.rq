@@ -432,7 +432,7 @@ WHERE
     ?monografia dc:creator ?creator .
     ?creator  foaf:name ?nameCreator 
   }
-   Filter(REGEX(?keywords , 'm.*' , 'i') && REGEX(?programmingLanguage , 'Javascript.*' , 'i') && REGEX(?nameCreator,'Allan dos Santos Oliveira.*','i'))
+   Filter(REGEX(?keywords , 'm.*' , 'i') && REGEX(?programmingLanguage , 'Javascript.*' , 'i') && REGEX(?prefLabel , 'geradores.*' , 'i') && REGEX(?nameCreator,'Allan dos Santos Oliveira.*','i'))
 }
 
 ORDER BY DESC(?name) 
