@@ -424,15 +424,15 @@ WHERE
   OPTIONAL 
   { 
     ?project gitup:category ?category .
-    ?category skos:prefLabel ?prefLabel .
+    ?category skos:prefLabel ?prefLabel 
   }
   OPTIONAL 
   { 
     ?project gitup:monografia ?monografia .
     ?monografia dc:creator ?creator .
-    ?creator  foaf:name ?nameCreator .
+    ?creator  foaf:name ?nameCreator 
   }
-  Filter REGEX((?keywords , '$keyword' , 'i') || (?category , '$category' , 'i') || (?nameCreator , '$nameCreator' , 'i')) 
+   Filter(REGEX(?keywords , 'm.*' , 'i') && REGEX(?programmingLanguage , 'Javascript.*' , 'i') && REGEX(?nameCreator,'Allan dos Santos Oliveira.*','i'))
 }
 
 ORDER BY DESC(?name) 
