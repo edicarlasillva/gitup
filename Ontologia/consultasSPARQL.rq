@@ -1,3 +1,4 @@
+#Prefixos
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX doap: <http://usefulinc.com/ns/doap#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -407,3 +408,31 @@ WHERE
   Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
 }
 ORDER BY DESC(?nameTester)
+
+# Filtro de busca avançada
+SELECT distinct 
+?name  
+?programmingLanguage 
+?prefLabel 
+?nameCreator
+
+WHERE 
+{
+  ?project doap:name ?name.
+  ?project dc:subject ?keywords .
+  ?project doap:programming-language ?programmingLanguage .
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category .
+    ?category skos:prefLabel ?prefLabel .
+  }
+  OPTIONAL 
+  { 
+    ?project gitup:monografia ?monografia .
+    ?monografia dc:creator ?creator .
+    ?creator  foaf:name ?nameCreator .
+  }
+  Filter REGEX((?keywords , '$keyword' , 'i') || (?category , '$category' , 'i') || (?nameCreator , '$nameCreator' , 'i')) 
+}
+
+ORDER BY DESC(?name) 
