@@ -261,31 +261,27 @@ WHERE
 ORDER BY DESC(?os)
 
 # Requisito
-SELECT distinct ?name ?requirements ?nameAuthor
+SELECT distinct ?name ?nameAuthor ?created ?versionRequirement ?improvement
 WHERE 
 {
-  ?project doap:name ?name ;
-           gitup:requirements ?requirements .
+  ?project doap:name ?name .
+  ?project gitup:requirements ?requirements .
 
   OPTIONAL 
   {
-      ?requirements gitup:author ?author .
-      ?author foaf:name ?nameAuthor .
+    ?requirements gitup:author ?author .
+    ?author foaf:name ?nameAuthor .
   }
 
   OPTIONAL 
+  { ?requirements doap:created ?created . }
+  OPTIONAL 
   { 
-    ?monografia gitup:coadvisor ?coadvisor .
-    ?coadvisor  foaf:name ?coadvisorName
+    ?requirements gitup:versionRequirement ?versionRequirement .
   }
   OPTIONAL 
   { 
-    ?monografia dc:creator ?creator .
-    ?creator  foaf:name ?nameCreator
-  }
-  OPTIONAL 
-  { 
-    ?monografia dc:language ?language
+    ?requirements gitup:improvement ?improvement
   }
 
   Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
