@@ -313,3 +313,73 @@ WHERE
   Filter REGEX(?keywords , 'Experimento.*' , 'i')
 }
 ORDER BY DESC(?name)
+
+# Desenvolvedores
+SELECT distinct ?name ?nameDeveloper
+WHERE 
+{
+  ?project doap:name ?name.
+  OPTIONAL 
+  {
+    ?project doap:developer ?developer .
+    ?developer foaf:name ?nameDeveloper .
+  }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+ORDER BY DESC(?nameDeveloper)
+
+# Documentadores
+SELECT distinct ?name ?nameDocumenter
+WHERE 
+{
+  ?project doap:name ?name.
+  OPTIONAL 
+  {
+    ?project doap:documenter ?documenter .
+    ?documenter foaf:name ?nameDocumenter .
+  }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+ORDER BY DESC(?nameDocumenter)
+
+# Tradutores
+SELECT distinct ?name ?nameTranslator 
+WHERE 
+{
+  ?project doap:name ?name.
+  OPTIONAL 
+  {
+    ?project doap:documenter ?translator  .
+    ?translator foaf:name ?nameTranslator  .
+  }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+ORDER BY DESC(?nameTranslator)
+
+# Colaboradores
+SELECT distinct ?name ?nameHelper  
+WHERE 
+{
+  ?project doap:name ?name.
+  OPTIONAL 
+  {
+    ?project doap:documenter ?helper   .
+    ?helper foaf:name ?nameHelper   .
+  }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+ORDER BY DESC(?nameHelper)
+
+# Testadores
+SELECT distinct ?name ?nameTester  
+WHERE 
+{
+  ?project doap:name ?name.
+  OPTIONAL 
+  {
+    ?project doap:documenter ?tester   .
+    ?tester foaf:name ?nameTester   .
+  }
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+ORDER BY DESC(?nameTester)
