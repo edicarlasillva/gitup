@@ -123,31 +123,66 @@ WHERE
 } 
 
 #Categoria
-SELECT distinct ?name ?prefLabel ?altfLabel ?narrower ?broader ?related
+SELECT distinct ?name ?prefLabel
 WHERE 
 {
-  ?project doap:name ?name.
-
+  ?project doap:name ?name .
   OPTIONAL 
   { 
     ?project gitup:category ?category .
     ?category skos:prefLabel ?prefLabel .
   }
+
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+
+# Nomes alternativos da categoria
+SELECT distinct ?name ?altfLabel
+WHERE
+{
+  ?project doap:name ?name .
   OPTIONAL 
   { 
     ?project gitup:category ?category .
     ?category skos:altLabel ?altfLabel .
   }
+
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+
+# Categorias filha
+SELECT distinct ?name ?narrower
+WHERE
+{
+  ?project doap:name ?name .
   OPTIONAL 
-  { 
+  {
     ?project gitup:category ?category .
     ?category skos:narrower ?narrower .
   }
+
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+
+# Categorias mãe
+SELECT distinct ?name ?broader
+WHERE
+{
+  ?project doap:name ?name .
   OPTIONAL 
   { 
     ?project gitup:category ?category .
     ?category skos:broader ?broader .
   }
+
+  Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
+}
+
+#Categorias relacionadas
+SELECT distinct ?name ?related
+WHERE
+{
+  ?project doap:name ?name .
   OPTIONAL 
   { 
     ?project gitup:category ?category .
