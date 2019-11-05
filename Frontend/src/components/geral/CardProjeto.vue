@@ -1,5 +1,5 @@
 <template>
-  <div class="box column is-4">
+  <div class="box column is-4-desktop is-half-tablet">
     <article class="media">
       <div class="media-content">
         <div class="content">
@@ -21,7 +21,12 @@
               </a>
             </div>
             <div class="mini-article-tags">
-              <a href ="#" @click.prevent="SearchKeyword(item)" v-for="item in data.keywords" :key="item">{{item}}</a>
+              <a
+                href="#"
+                @click.prevent="SearchKeyword(item)"
+                v-for="item in data.keywords"
+                :key="item"
+              >{{item}}</a>
             </div>
           </div>
         </div>
@@ -32,20 +37,18 @@
 <script>
 export default {
   name: "card-projeto",
-  props:["data"],
+  props: ["data"],
   data() {
     return {};
   },
-  computed:{
-  
-  },
-  methods:{
-    DetailsProject(data){
-        this.$store.commit("SetProjectData",data)
-        this.$router.replace({path:"/detalhes-projeto/"+data.name})
+  computed: {},
+  methods: {
+    DetailsProject(data) {
+      this.$store.commit("SetProjectData", data);
+      this.$router.replace({ path: "/detalhes-projeto/" + data.name });
     },
-    SearchKeyword(keyword){
-      this.$router.push("/projetos?q="+keyword)
+    SearchKeyword(keyword) {
+      this.$router.push("/projetos?q=" + keyword);
     }
   }
 };

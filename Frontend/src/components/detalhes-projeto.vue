@@ -12,10 +12,10 @@
     <section class="section">
       <div class="container page-content is-flex">
         <div class="columns">
-          <aside class="sidebar column is-two-fifths">
+          <aside class="sidebar column is-one-third">
             <h4 class="title title--section is-3">
               <span class="icon-section">
-                <i class="far fa-sticky-note"></i>
+                <i class="fas fa-sticky-note"></i>
               </span>
               Resumo
             </h4>
@@ -44,13 +44,21 @@
               </span>
             </div>
             <nav class="intro-buttons">
-              <a class="button button--alter is-medium is-link" target="_blank" :href="linkRepository"> 
+              <a
+                class="button button--alter is-medium is-link"
+                target="_blank"
+                :href="linkRepository"
+              >
                 <span>
                   <i class="fab fa-github"></i>
                   <strong>Acessar repositório</strong>
                 </span>
               </a>
-              <a class="button button--alter is-medium is-light btn-rounded is-outlined" :href="monografia.linkMonografia" target="_blank">
+              <a
+                class="button button--alter is-medium is-light btn-rounded is-outlined"
+                :href="monografia.linkMonografia"
+                target="_blank"
+              >
                 <span>
                   <i class="fas fa-book-open"></i>
                   <strong>Acessar monografia</strong>
@@ -97,27 +105,39 @@
                 </tr>
                 <tr>
                   <td class="td-name">Site</td>
-                  <td class="td-description">{{urlHomePage}}</td>
+                  <td class="td-description">
+                    <a :href="urlHomePage" target="_blank">{{urlHomePage}}</a>
+                  </td>
                 </tr>
                 <tr>
                   <td class="td-name">Sites antigos</td>
-                  <td class="td-description">{{urlOldHomepage}}</td>
+                  <td class="td-description">
+                    <a :href="urlOldHomepage" target="_blank">{{urlOldHomepage}}</a>
+                  </td>
                 </tr>
                 <tr>
                   <td class="td-name">Página de download</td>
-                  <td class="td-description">{{downloadPage}}</td>
+                  <td class="td-description">
+                    <a :href="downloadPage" target="_blank">{{downloadPage}}</a>
+                  </td>
                 </tr>
                 <tr>
                   <td class="td-name">Lista de discussão</td>
-                  <td class="td-description">{{urlMailingList}}</td>
+                  <td class="td-description">
+                    <a :href="urlMailingList" target="_blank">{{urlMailingList}}</a>
+                  </td>
                 </tr>
                 <tr>
                   <td class="td-name">Rastreador de bugs</td>
-                  <td class="td-description">{{bugDatabase}}</td>
+                  <td class="td-description">
+                    <a :href="bugDatabase" target="_blank">{{bugDatabase}}</a>
+                  </td>
                 </tr>
                 <tr>
                   <td class="td-name">Link das telas</td>
-                  <td class="td-description">{{screenshots}}</td>
+                  <td class="td-description">
+                    <a :href="screenshots" target="_blank">{{screenshots}}</a>
+                  </td>
                 </tr>
                 <tr>
                   <td class="td-name">Desenvolvedor principal</td>
@@ -145,9 +165,9 @@
                 </tr>
               </tbody>
             </table>
-            <h4 class="title title--section title-table  is-3">
+            <h4 class="title title--section title-table is-3">
               <span class="icon-section">
-                <i class="fas fa-info"></i>
+                <i class="fas fa-code-branch"></i>
               </span>
               Versão
             </h4>
@@ -167,9 +187,9 @@
                 </tr>
               </tbody>
             </table>
-            <h4 class="title title--section title-table  is-3">
+            <h4 class="title title--section title-table is-3">
               <span class="icon-section">
-                <i class="fas fa-info"></i>
+                <i class="fas fa-box-open"></i>
               </span>
               Repositório
             </h4>
@@ -177,13 +197,15 @@
               <tbody>
                 <tr>
                   <td class="td-name">Link do repositório</td>
-                  <td class="td-description">{{linkRepository}}</td>
+                  <td class="td-description">
+                    <a :href="linkRepository" target="_blank">{{linkRepository}}</a>
+                  </td>
                 </tr>
               </tbody>
             </table>
-            <h4 class="title title--section title-table  is-3">
+            <h4 class="title title--section title-table is-3">
               <span class="icon-section">
-                <i class="fas fa-info"></i>
+                <i class="fas fa-check"></i>
               </span>
               Especificação de implementação
             </h4>
@@ -199,29 +221,19 @@
                 </tr>
               </tbody>
             </table>
-            <h4 class="title title--section title-table  is-3">
+            <h4 class="title title--section title-table is-3">
               <span class="icon-section">
-                <i class="fas fa-info"></i>
+                <i class="fas fa-file"></i>
               </span>
               Requisito
             </h4>
             <table class="functions-list">
               <tbody>
-                <!-- <tr>
-                  <td class="td-name">Autor</td>
-                  <td class="td-description"></td>
-                </tr>
-                <tr>
-                  <td class="td-name">Data de criação</td>
-                  <td class="td-description"></td>
-                </tr>
-                <tr>
-                  <td class="td-name">Versão</td>
-                  <td class="td-description"></td>
-                </tr> -->
                 <tr>
                   <td class="td-name">Documento de requisitos</td>
-                  <td class="td-description">{{requeriment.file}}</td>
+                  <td class="td-description">
+                    <a :href="requeriment.file" target="_blank">{{requeriment.file}}</a>
+                  </td>
                 </tr>
                 <tr>
                   <td class="td-name">Sugestão de melhorias</td>
@@ -229,9 +241,9 @@
                 </tr>
               </tbody>
             </table>
-            <h4 class="title title--section title-table  is-3">
+            <h4 class="title title--section title-table is-3">
               <span class="icon-section">
-                <i class="fas fa-info"></i>
+                <i class="fas fa-file-alt"></i>
               </span>
               Monografia
             </h4>
@@ -259,9 +271,9 @@
                 </tr>
               </tbody>
             </table>
-            <h4 class="title title--section title-table  is-3">
+            <h4 class="title title--section title-table is-3">
               <span class="icon-section">
-                <i class="fas fa-info"></i>
+                <i class="fas fa-list-ul"></i>
               </span>
               Categoria
             </h4>
@@ -304,135 +316,137 @@
         </h4>
         <div class="grid-projects is-flex columns">
           <card v-for="item in ListProjects" :key="item.id" :data="item"></card>
-          
         </div>
       </div>
     </section>
-     <loading :active.sync="isLoading" 
-        :is-full-page="fullPage"></loading>
+    <loading :active.sync="isLoading" :is-full-page="fullPage"></loading>
   </div>
 </template>
 
 <script>
 import Busca from "./geral/Busca";
 import CardProjetos from "./geral/CardProjeto";
-import config from '../config';
-import Axios from 'axios'
-import Loading from 'vue-loading-overlay';
+import config from "../config";
+import Axios from "axios";
+import Loading from "vue-loading-overlay";
 
 export default {
   name: "detalhes-projeto",
   data() {
     return {
-       ListProjects:[],
-       isLoading: false,
-       fullPage: true,
-        name:'',
-        created :'',
-        programmingLanguage:'',
-        shortdesc:'',
-        description:'',
-        homepage:'',
-        oldHomepage:'',
-        downloadPage:'',
-        linkRepository:'',
-        keywords:'',
-        so:'',
-        version:'',
-        license:'',
-        specification:'',
-        monografia:'',
-        urlHomePage:'',
-        urlOldHomepage:'',
-        downloadPage:'',
-        urlMailingList:'',
-        bugDatabase:'',
-        screenshots:'',
-        language:'',
-        nameMaintainer:'',
-        categorys:'',
-        alterCategories:'',
-        childCategories:'',
-        motherCategories:'',
-        relatedCategories:'',
-        developers:'',
-        documentors:'',
-        translators:'',
-        collaborators:'',
-        testers:'',
-        requeriment:''
-
- 
+      ListProjects: [],
+      isLoading: false,
+      fullPage: true,
+      name: "",
+      created: "",
+      programmingLanguage: "",
+      shortdesc: "",
+      description: "",
+      homepage: "",
+      oldHomepage: "",
+      downloadPage: "",
+      linkRepository: "",
+      keywords: "",
+      so: "",
+      version: "",
+      license: "",
+      specification: "",
+      monografia: "",
+      urlHomePage: "",
+      urlOldHomepage: "",
+      downloadPage: "",
+      urlMailingList: "",
+      bugDatabase: "",
+      screenshots: "",
+      language: "",
+      nameMaintainer: "",
+      categorys: "",
+      alterCategories: "",
+      childCategories: "",
+      motherCategories: "",
+      relatedCategories: "",
+      developers: "",
+      documentors: "",
+      translators: "",
+      collaborators: "",
+      testers: "",
+      requeriment: ""
     };
   },
-  methods:{
-     GetInfoProject(){
-        this.isLoading = true;
-        Axios.get(config.ENDPOINT_URLL+"project/info/"+this.$route.params.nome).then(response=>{
-           this.isLoading = false
-           let project = response.data.data
-           this.name = project.name
-           this.created = project.created
-           this.programmingLanguage = project.programmingLanguage
-           this.shortdesc = project.shortdesc
-           this.description = project.description
-           this.homepage = project.homepage
-           this.oldHomepage = project.oldHomepage
-           this.downloadPage = project.downloadPage
-           this.linkRepository = project.linkRepository
-           this.keywords = project.keywords
-           this.so = project.so
-           this.version = project.version
-           this.license = project.license
-           this.specification = project.specification
-           this.monografia = project.monografia
-           this.urlHomePage = project.urlHomepage
-           this.urlOldHomepage = project.urlOldHomepage
-           this.downloadPage = project.downloadPage
-           this.urlMailingList = project.urlMailingList
-           this.bugDatabase = project.bugDatabase
-           this.screenshots = project.screenshots
-           this.language = project.language
-           this.nameMaintainer = project.nameMaintainer
-           this.categorys = project.categorys
-           this.alterCategories = project.categorys.altfLabel
-           this.childCategories = project.categorys.narrower
-           this.motherCategories = project.categorys.broader
-           this.relatedCategories = project.categorys.related
-           this.developers = project.nameDeveloper
-           this.documentors = project.nameDocumenter
-           this.translators = project.nameTranslator
-           this.collaborators = project.nameHelper
-           this.testers = project.nameTester
-           this.requeriment = project.requeriment
-           
+  methods: {
+    GetInfoProject() {
+      this.isLoading = true;
+      Axios.get(
+        config.ENDPOINT_URLL + "project/info/" + this.$route.params.nome
+      )
+        .then(response => {
+          this.isLoading = false;
+          let project = response.data.data;
+          this.name = project.name;
+          this.created = project.created;
+          this.programmingLanguage = project.programmingLanguage;
+          this.shortdesc = project.shortdesc;
+          this.description = project.description;
+          this.homepage = project.homepage;
+          this.oldHomepage = project.oldHomepage;
+          this.downloadPage = project.downloadPage;
+          this.linkRepository = project.linkRepository;
+          this.keywords = project.keywords;
+          this.so = project.so;
+          this.version = project.version;
+          this.license = project.license;
+          this.specification = project.specification;
+          this.monografia = project.monografia;
+          this.urlHomePage = project.urlHomepage;
+          this.urlOldHomepage = project.urlOldHomepage;
+          this.downloadPage = project.downloadPage;
+          this.urlMailingList = project.urlMailingList;
+          this.bugDatabase = project.bugDatabase;
+          this.screenshots = project.screenshots;
+          this.language = project.language;
+          this.nameMaintainer = project.nameMaintainer;
+          this.categorys = project.categorys;
+          this.alterCategories = project.categorys.altfLabel;
+          this.childCategories = project.categorys.narrower;
+          this.motherCategories = project.categorys.broader;
+          this.relatedCategories = project.categorys.related;
+          this.developers = project.nameDeveloper;
+          this.documentors = project.nameDocumenter;
+          this.translators = project.nameTranslator;
+          this.collaborators = project.nameHelper;
+          this.testers = project.nameTester;
+          this.requeriment = project.requeriment;
 
-          this.GetRelationsProjects()
-
-        }).catch(error =>{
-           alert(error.response.data.message);
+          this.GetRelationsProjects();
         })
-     },
-     GetRelationsProjects(){
-         Axios.get(config.ENDPOINT_URLL+"project/relations/"+this.$route.params.nome).then(response=>{
-            this.ListProjects = response.data.data
-         }).catch(error =>{
-           alert(error.response.data.message);
-         })
-     },
+        .catch(error => {
+          alert(error.response.data.message);
+        });
+    },
+    GetRelationsProjects() {
+      Axios.get(
+        config.ENDPOINT_URLL + "project/relations/" + this.$route.params.nome
+      )
+        .then(response => {
+          this.ListProjects = response.data.data;
+        })
+        .catch(error => {
+          alert(error.response.data.message);
+        });
+    }
   },
-  mounted(){
-    this.$nextTick(()=>{
-       setTimeout(()=>{
-        window.scrollTo(scrollY,0)
-        this.GetInfoProject()
-       },20)
-    })
+  mounted() {
+    this.$nextTick(() => {
+      setTimeout(() => {
+        window.scrollTo(scrollY, 0);
+        this.GetInfoProject();
+      }, 20);
+    });
   },
-  beforeRouteUpdate(to,from,next){
-     next()
-     window.scrollTo(scrollY,0)
-     this.GetInfoProject()
+  beforeRouteUpdate(to, from, next) {
+    next();
+    window.scrollTo(scrollY, 0);
+    this.GetInfoProject();
   },
   components: {
     busca: Busca,

@@ -13,6 +13,8 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-top: 40px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .search {
@@ -36,7 +38,7 @@
 .search>input {
   outline: none;
   border: 0;
-  width: 800px;
+  width: 60vw;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 500;

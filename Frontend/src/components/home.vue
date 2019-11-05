@@ -4,7 +4,7 @@
       <div class="container header-align">
         <!-- <p>Repositório de projetos de software</p> -->
         <div class="logo">
-          <a href="" @click.prevent="$router.push('index')" class="is-flex">
+          <a href @click.prevent="$router.push('index')" class="is-flex">
             <img src="../../static/images/logo.svg" alt="Logotipo GitUP" />
             <h4 class="title is-4">GitUP</h4>
           </a>
@@ -20,17 +20,18 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <!-- <a class="navbar-item">
-											Login
-                </a>-->
-                <span class="navbar-item">
+                <a
+                  href="https://github.com/edicarlasillva/gitup"
+                  class="navbar-item"
+                >Sobre o projeto</a>
+                <!-- <span class="navbar-item">
                   <button class="button button--alter is-link">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Contribuir</span>
                   </button>
-                </span>
+                </span>-->
               </div>
             </div>
           </div>
@@ -42,21 +43,23 @@
 
     <footer>
       <section class="colab">
-        <div class="container is-flex">
-          <div class="left">
-            <h2>Colabore</h2>
-            <p>
-              Projeto open source.
-              <br />Ajude a evoluir o GitUP!
-            </p>
-          </div>
-          <div class="right">
-            <a href="https://github.com/edicarlasillva/gitup" target="_blank">
-              <div>
-                <i class="fab fa-github"></i>
-              </div>
-              <p class="colab-name">Contribuir</p>
-            </a>
+        <div class="container">
+          <h2>Colabore</h2>
+          <div class="columns is-desktop footer-area">
+            <div class="left column is-6">
+              <p>
+                Projeto open source.
+                <br />Ajude a evoluir o GitUP!
+              </p>
+            </div>
+            <div class="right column is-6">
+              <a href="https://github.com/edicarlasillva/gitup" target="_blank">
+                <div>
+                  <i class="fab fa-github"></i>
+                </div>
+                <p class="colab-name">Contribuir</p>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -84,17 +87,12 @@
 </template>
 
 <script>
-
 export default {
   name: "home",
   data() {
     return {};
   },
-  methods:{
-     
-  },
-  mounted() {
-    
-  }
+  methods: {},
+  mounted() {}
 };
 </script>

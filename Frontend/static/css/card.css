@@ -14,15 +14,12 @@
   flex-direction: column;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  -ms-flex-negative: 1;
 }
 
 .grid-projects .box {
   margin: .75rem;
 }
-
-/* .grid-projects .box:last-child {
-  margin-bottom: 1.5rem;
-} */
 
 .mini-article-author {
   -webkit-box-orient: vertical;

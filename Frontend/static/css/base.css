@@ -52,6 +52,11 @@ a {
   font-weight: 700;
 }
 
+a.navbar-item:hover {
+  background: none;
+  color: #36f;
+}
+
 body {
   color: #000;
   /* font-size: 1.6rem; */
@@ -73,16 +78,6 @@ body {
   justify-content: center;
 }
 
-.column {
-  -ms-flex-preferred-size: 300px !important;
-  flex-basis: 300px !important;
-  -webkit-box-flex: 1 !important;
-  -ms-flex-positive: 1 !important;
-  flex-grow: 1 !important;
-  -ms-flex-negative: 1 !important;
-  flex-shrink: 1 !important;
-}
-
 .flex-column {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -93,7 +88,8 @@ body {
 .header {
   height: 110px;
   margin: 0 auto;
-  padding-left: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,6 +118,7 @@ body {
 
 .info-started {
   background-color: #f3f5fb;
+  padding-top: 0 !important;
 }
 
 .header-align {
@@ -139,6 +136,8 @@ body {
 
 .hero {
   text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .hero.is-info {
@@ -150,7 +149,7 @@ body {
 }
 
 .section {
-  padding: 80px 0 !important;
+  padding: 80px 0;
 }
 
 .title {
@@ -206,8 +205,11 @@ body {
   top: 90px;
 }
 
-.last-projects {
+.last-projects,
+.related-projects {
   background-color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .related-projects {
@@ -261,6 +263,8 @@ body {
   padding-top: 6rem;
   padding-bottom: 6rem;
   background-color: #f3f5fb;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .colab h2 {
@@ -271,13 +275,14 @@ body {
 }
 
 .colab p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.3;
   font-weight: 600;
 }
 
-.colab-name {
+.colab p.colab-name {
   color: #fff;
+  font-size: 2rem;
 }
 
 .colab .left {
@@ -332,6 +337,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 .bd-focus-item .icon-section {
@@ -340,11 +346,6 @@ body {
 
 h4.title.title--section {
   margin-bottom: 3rem;
-}
-
-.sidebar {
-  max-width: 350px;
-  min-width: 350px;
 }
 
 .filter-itens {
@@ -473,4 +474,25 @@ table.functions-list tr:hover {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.page-content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .column.is-4-desktop {
+    width: calc(33.33333% - 1.5rem);
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .page-list-project .column.is-4-desktop {
+    width: calc(50% - 1.5rem);
+  }
+
 }
