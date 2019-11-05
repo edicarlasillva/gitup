@@ -24,119 +24,61 @@
               <bulma-accordion-item>
                 <h4 slot="title">Linguagem de programação</h4>
                 <div slot="content">
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">JavaScript</div>
-                      <div class="filter-item-count">44</div>
+                  <div class="o-grid__item -xs-24" v-for="item in filters.languages" :key="item">
+                    <a href="#" @click.prevent="SetFilter('LANGUAGE',item)" class="filter-item">
+                      <div class="filter-item-name">{{item}}</div>
+                      <!-- <div class="filter-item-count">44</div> -->
                     </a>
                   </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">Java</div>
-                      <div class="filter-item-count">32</div>
-                    </a>
-                  </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">PHP</div>
-                      <div class="filter-item-count">25</div>
-                    </a>
-                  </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">HTML</div>
-                      <div class="filter-item-count">13</div>
-                    </a>
-                  </div>
+                 
                 </div>
               </bulma-accordion-item>
               <!-- add as many of these items as you need - fill them with content via the slots -->
               <bulma-accordion-item>
                 <h4 slot="title">Categoria</h4>
                 <div slot="content">
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">Música</div>
-                      <div class="filter-item-count">44</div>
+                  <div class="o-grid__item -xs-24" v-for="item in filters.categories" :key="item">
+                    <a href="#" @click.prevent="SetFilter('CATEGORIE',item)" class="filter-item">
+                      <div class="filter-item-name">{{item}}</div>
+                      <!-- <div class="filter-item-count">44</div> -->
                     </a>
                   </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">Geradores</div>
-                      <div class="filter-item-count">32</div>
-                    </a>
-                  </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">Munual</div>
-                      <div class="filter-item-count">25</div>
-                    </a>
-                  </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">Markdown</div>
-                      <div class="filter-item-count">13</div>
-                    </a>
-                  </div>
+                 
                 </div>
               </bulma-accordion-item>
               <bulma-accordion-item>
                 <h4 slot="title">Autor</h4>
                 <div slot="content">
                   <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">Edicarla Silva</div>
-                      <div class="filter-item-count">44</div>
+                    <a href="#" @click.prevent="SetFilter('CREATOR',item)" class="filter-item" v-for="item in filters.creators" :key="item">
+                      <div class="filter-item-name">{{item}}</div>
+                      <!-- <div class="filter-item-count">44</div> -->
                     </a>
                   </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">Rafael Marques</div>
-                      <div class="filter-item-count">32</div>
-                    </a>
-                  </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">João Santos</div>
-                      <div class="filter-item-count">25</div>
-                    </a>
-                  </div>
-                  <div class="o-grid__item -xs-24">
-                    <a href="#" class="filter-item">
-                      <div class="filter-item-name">Ana Maria</div>
-                      <div class="filter-item-count">13</div>
-                    </a>
-                  </div>
+            
                 </div>
               </bulma-accordion-item>
             </bulma-accordion>
           </aside>
           <article class="content column">
             <div class="filter-itens">
-              <span class="tag is-default is-normal">
-                Javascript
-                <button class="delete is-small"></button>
+              <span class="tag is-default is-normal" v-for="item in filterSelected" :key="item.filter">
+                {{item.filter}}
+                <button class="delete is-small" type="button" @click="RemoveFilter(item)"></button>
               </span>
-              <span class="tag is-default is-normal">
-                Ontologia
-                <button class="delete is-small"></button>
-              </span>
-              <span class="tag is-default is-normal">
-                Edicarla Silva
-                <button class="delete is-small"></button>
-              </span>
+             
             </div>
             <div class="grid-projects is-flex columns">
               <h3 v-if="ListProjects.length == 0">Não foram encontrados projetos para sua busca.</h3>
               <card v-else v-for="item in ListProjects" :key="item.id" :data="item"></card>
 
             </div>
-            <div class="navigate-page" v-if="ListProjects.length > 0">
+            <!-- <div class="navigate-page" v-if="ListProjects.length > 0">
               <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
                 <a class="pagination-previous">Anterior</a>
                 <a class="pagination-next">Próximo</a>
               </nav>
-            </div>
+            </div> -->
           </article>
         </div>
       </div>
@@ -159,7 +101,12 @@ export default {
       ListProjects: [],
       isLoading: false,
       fullPage: true,
-      SearchValue:''
+      SearchValue:'',
+      filters:'',
+      filterSelected:[],
+      languageFilter:'',
+      categorieFilter:'',
+      creatorFilter:''
     };
   },
   components: {
@@ -172,12 +119,72 @@ export default {
   methods: {
     List() {
       this.isLoading = true;
-      Axios.get(config.ENDPOINT_URLL + "projects/search/" + this.$route.query.q).then(
-        response => {
+      Axios.get(config.ENDPOINT_URLL + "projects/search/" + this.$route.query.q).then(response => {
           this.isLoading = false;
           this.ListProjects = response.data.data;
-        }
-      );
+          this.ListFilters();
+      });
+    },
+    ListFilters(){
+       Axios.get(config.ENDPOINT_URLL+"project/filters/"+this.$route.query.q).then(response=>{
+           this.filters = response.data.data;  
+       }).catch(error =>{
+           alert(error.response.data.message);
+       });
+    },
+    FilterProject(){
+         this.isLoading = true;
+      Axios.get(config.ENDPOINT_URLL + `project/filters-projects?keyword=${this.$route.query.q}&language=${this.languageFilter}&categorie=${this.categorieFilter}&creator=${this.creatorFilter}`).then(response => {
+          this.isLoading = false;
+          this.ListProjects = response.data.data;
+          this.ListFilters();
+      });
+    },
+    SetFilter(type,value){
+      if(type == "LANGUAGE"){
+        this.SetSelectFilter(value,"LANGUAGE")
+        this.languageFilter = value
+        this.FilterProject()
+      }else if(type == "CATEGORIE"){
+        this.SetSelectFilter(value,"CATEGORIE")
+        this.categorieFilter = value
+        this.FilterProject()
+      }else if(type == "CREATOR"){
+        this.SetSelectFilter(value,"CREATOR")
+        this.creatorFilter = value
+        this.FilterProject()
+      }
+    },
+    SetSelectFilter(filter,type){
+       let f = null
+       if(this.filterSelected.length > 0){
+           f = this.filterSelected.find(item=>{
+              return item.type == type
+          })
+       }
+       
+       if(f == undefined || f == null){
+          this.filterSelected.push({type,filter})
+       }else{
+           this.filterSelected.map(item=>{
+              if(item.type == type){
+                 item.filter = filter
+              }
+           })
+       }
+    },
+    RemoveFilter(item){
+       this.filterSelected = this.filterSelected.filter(itemf =>{
+           return itemf.filter != item.filter
+       });
+       if(item.type == "LANGUAGE"){
+          this.languageFilter = '';
+       }else if(item.type == "CATEGORIE"){
+          this.categorieFilter = ''
+       }else{
+         this.creatorFilter = ''
+       }
+       this.FilterProject()
     }
   },
   beforeRouteUpdate(to,from,next){

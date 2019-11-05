@@ -50,7 +50,7 @@
                   <strong>Acessar repositório</strong>
                 </span>
               </a>
-              <a class="button button--alter is-medium is-light btn-rounded is-outlined" href>
+              <a class="button button--alter is-medium is-light btn-rounded is-outlined" :href="monografia.linkMonografia" target="_blank">
                 <span>
                   <i class="fas fa-book-open"></i>
                   <strong>Acessar monografia</strong>
@@ -85,7 +85,7 @@
                 </tr>
                 <tr>
                   <td class="td-name">Idioma do projeto</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{language}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Palavras-chave</td>
@@ -121,27 +121,27 @@
                 </tr>
                 <tr>
                   <td class="td-name">Desenvolvedor principal</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{nameMaintainer}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Desenvolvedores</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{developers.toString()}}</td>
                 </tr>
                 <tr>
-                  <td class="td-name">Ducumentadores</td>
-                  <td class="td-description"></td>
+                  <td class="td-name">Documentadores</td>
+                  <td class="td-description">{{documentors.toString()}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Tradutores</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{translators.toString()}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Testadores</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{testers.toString()}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Colaboradores</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{collaborators.toString()}}</td>
                 </tr>
               </tbody>
             </table>
@@ -207,7 +207,7 @@
             </h4>
             <table class="functions-list">
               <tbody>
-                <tr>
+                <!-- <tr>
                   <td class="td-name">Autor</td>
                   <td class="td-description"></td>
                 </tr>
@@ -218,14 +218,14 @@
                 <tr>
                   <td class="td-name">Versão</td>
                   <td class="td-description"></td>
-                </tr>
+                </tr> -->
                 <tr>
                   <td class="td-name">Documento de requisitos</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{requeriment.file}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Sugestão de melhorias</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{requeriment.improvement}}</td>
                 </tr>
               </tbody>
             </table>
@@ -239,7 +239,7 @@
               <tbody>
                 <tr>
                   <td class="td-name">Discente</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{monografia.nameCreator}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Orientador</td>
@@ -269,23 +269,23 @@
               <tbody>
                 <tr>
                   <td class="td-name">Categoria</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{categorys.prefLabel}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Nome alternativo</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{alterCategories.toString()}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Categoria mãe</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{motherCategories.toString()}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Categorias filhas</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{childCategories.toString()}}</td>
                 </tr>
                 <tr>
                   <td class="td-name">Categoria relacionadas</td>
-                  <td class="td-description"></td>
+                  <td class="td-description">{{relatedCategories.toString()}}</td>
                 </tr>
               </tbody>
             </table>
@@ -348,7 +348,21 @@ export default {
         urlMailingList:'',
         bugDatabase:'',
         screenshots:'',
-       
+        language:'',
+        nameMaintainer:'',
+        categorys:'',
+        alterCategories:'',
+        childCategories:'',
+        motherCategories:'',
+        relatedCategories:'',
+        developers:'',
+        documentors:'',
+        translators:'',
+        collaborators:'',
+        testers:'',
+        requeriment:''
+
+ 
     };
   },
   methods:{
@@ -378,6 +392,20 @@ export default {
            this.urlMailingList = project.urlMailingList
            this.bugDatabase = project.bugDatabase
            this.screenshots = project.screenshots
+           this.language = project.language
+           this.nameMaintainer = project.nameMaintainer
+           this.categorys = project.categorys
+           this.alterCategories = project.categorys.altfLabel
+           this.childCategories = project.categorys.narrower
+           this.motherCategories = project.categorys.broader
+           this.relatedCategories = project.categorys.related
+           this.developers = project.nameDeveloper
+           this.documentors = project.nameDocumenter
+           this.translators = project.nameTranslator
+           this.collaborators = project.nameHelper
+           this.testers = project.nameTester
+           this.requeriment = project.requeriment
+           
 
           this.GetRelationsProjects()
 
