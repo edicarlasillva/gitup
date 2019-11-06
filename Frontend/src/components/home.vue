@@ -4,7 +4,7 @@
       <div class="container header-align">
         <!-- <p>Repositório de projetos de software</p> -->
         <div class="logo">
-          <a href @click.prevent="$router.push('index')" class="is-flex">
+          <a href @click.prevent="RedirectHome" class="is-flex">
             <img src="../../static/images/logo.svg" alt="Logotipo GitUP" />
             <h4 class="title is-4">GitUP</h4>
           </a>
@@ -83,7 +83,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    RedirectHome(){
+        window.location = "#/index"
+     }
+  },
   mounted() {}
 };
 </script>

@@ -267,7 +267,7 @@
                 </tr>
                 <tr>
                   <td class="td-name">Link da monografia</td>
-                  <td class="td-description">{{monografia.linkMonografia}}</td>
+                  <td class="td-description"><a :href="monografia.linkMonografia" target="_blank">{{monografia.linkMonografia}}</a></td>
                 </tr>
               </tbody>
             </table>

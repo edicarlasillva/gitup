@@ -17,7 +17,7 @@
             <div class="mini-article-author is-flex">
               <span class="author-label">Autor</span>
               <a href="#">
-                <span class="author-name">{{data.nameCreator}}</span>
+                <span class="author-name">{{CreatorProject}}</span>
               </a>
             </div>
             <div class="mini-article-tags">
@@ -41,7 +41,15 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+      CreatorProject(){
+         if(this.data.hasOwnProperty("nameCreator")){
+            return this.data.nameCreator
+         }else{
+           return this.data.nameMaintainer
+         }
+      }
+  },
   methods: {
     DetailsProject(data) {
       this.$store.commit("SetProjectData", data);

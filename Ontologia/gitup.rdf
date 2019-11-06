@@ -865,9 +865,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://ontologia.gitup.com.br:8890/gitup#Monografia_Chordix">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Tércio_Souza_de_Jesus"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22942</gitup:url>
         <dc:language>en</dc:language>
+        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Tércio_Souza_de_Jesus"/>
     </owl:NamedIndividual>
     
 
@@ -877,9 +877,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://ontologia.gitup.com.br:8890/gitup#Monografia_GuideAutomator_Automated_User_Manual_Generation_with_Markdown">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Allan_dos_Santos_Oliveira"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/20947</gitup:url>
         <dc:language>en</dc:language>
+        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Allan_dos_Santos_Oliveira"/>
     </owl:NamedIndividual>
     
 
@@ -889,9 +889,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://ontologia.gitup.com.br:8890/gitup#Monografia_Melhoria_do_GuideAutomator">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Welbert_Azevedo_Serra"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/24733</gitup:url>
         <dc:language>en</dc:language>
+        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Welbert_Azevedo_Serra"/>
     </owl:NamedIndividual>
     
 
@@ -901,9 +901,9 @@ Chrome and Chrome WebDriver (Selenium Web Browser automation)</doap:description>
     <owl:NamedIndividual rdf:about="http://ontologia.gitup.com.br:8890/gitup#Monografia_MeuHorário_2_uma_aplicação_web_para_simulação_de_matrícula">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Gabriel_Assis_Erbetta"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/22939</gitup:url>
         <dc:language>pt</dc:language>
+        <dc:creator rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Gabriel_Assis_Erbetta"/>
     </owl:NamedIndividual>
     
 
@@ -1167,6 +1167,18 @@ PostgreSQL</doap:description>
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Dados_Conectados -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Dados_Conectados">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Web_Semântica"/>
+        <skos:altLabel>Dados Linkados</skos:altLabel>
+        <skos:altLabel>Dados Vinculados</skos:altLabel>
+        <skos:prefLabel>Dados Conectados</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado -->
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado">
@@ -1178,13 +1190,115 @@ PostgreSQL</doap:description>
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:currentProject rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gitup"/>
+        <foaf:title>Bacharel</foaf:title>
+        <foaf:name>Edicarla Conceição da Silva</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Frederico_Araújo_Durão -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Frederico_Araújo_Durão">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Frederico Araújo Durão</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Gabriela_Mota -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Gabriela_Mota">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Gabriela Mota</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Gitup -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Gitup">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <gitup:category rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dados_Conectados"/>
+        <gitup:monografia rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Monografia_Gitup"/>
+        <gitup:requirements rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Repositório_Gitup"/>
+        <doap:developer rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
+        <doap:documenter rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
+        <doap:helper rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gabriela_Mota"/>
+        <doap:homepage rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Site_Gitup"/>
+        <doap:implements rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Implementação_Gitup"/>
+        <doap:maintainer rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
+        <doap:repository rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Repositório_Gitup"/>
+        <doap:tester rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
+        <doap:translator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
+        <dc:subject>Engenharia de Ontologia</dc:subject>
+        <dc:subject>Linked Data</dc:subject>
+        <dc:subject>Repositório de Código</dc:subject>
+        <dc:subject>Reuso de Software</dc:subject>
+        <dc:subject>Web Semântica</dc:subject>
+        <doap:created>06/11/2019</doap:created>
+        <doap:description>Este trabalho propõe um Framework Linked Data para descrever projetos de software.  Espera-se com este modelo promover o compartilhamento e reuso desses projetos pelos alunos do DCC/UFBA.</doap:description>
+        <doap:language>pt</doap:language>
+        <doap:license>GLP V3</doap:license>
+        <doap:programming-language>PHP</doap:programming-language>
+        <doap:shortdesc>Uma curadoria de projetos de software da UFBA para você explorar, se inspirar, reusar e compartilhar. Tudo em um só lugar!</doap:shortdesc>
+        <doap:bug-database>https://github.com/edicarlasillva/gitup/issues</doap:bug-database>
+        <doap:name>Um framework baseado em ontologias linked data para repositório de projetos de software</doap:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Implementação_Gitup -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Implementação_Gitup">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Specification"/>
+        <doap:created>06/11/2019</doap:created>
+        <doap:description>1 - Instalar as dependências
+npm install (dentro da pasta Frontend)
+
+2 - Executar em Desenvolvimento
+npm run dev
+
+3 - Build para produção
+npm run build (colocar o conteúdo da pasta dist no servidor web)
+
+Backend
+
+PHP 7.x
+Laravel 6.0.1
+Composer
+
+1 - Copiar conteúdo da pasta (Webservices-gitup (EasyRDF) para um servidor web
+
+2 - Rodar o comando composer install</doap:description>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Monografia_Conversor_RMC -->
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Monografia_Conversor_RMC">
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Rodrigo_Rocha_Gomes_e_Souza"/>
-        <dc:creator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado"/>
         <gitup:url>https://repositorio.ufba.br/ri/handle/ri/20948</gitup:url>
+        <dc:language>pt</dc:language>
+        <dc:creator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dennis_Lessa_Dourado"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Monografia_Gitup -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Monografia_Gitup">
+        <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
+        <gitup:advisor rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Frederico_Araújo_Durão"/>
+        <gitup:coadvisor rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gabriela_Mota"/>
+        <dc:creator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
+        <gitup:url>http://bit.ly/MonografiaEdicarla</gitup:url>
         <dc:language>pt</dc:language>
     </owl:NamedIndividual>
     
@@ -1195,6 +1309,42 @@ PostgreSQL</doap:description>
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Repositorio_Conversor_RMC">
         <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
         <doap:browse>https://github.com/dennislessa/conversor_rmc</doap:browse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Repositório_Gitup -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Repositório_Gitup">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
+        <doap:browse>https://github.com/edicarlasillva/gitup</doap:browse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Requisito_Gitup -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Requisito_Gitup">
+        <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Requirement"/>
+        <gitup:fileRequirement>http://bit.ly/RequisitosGitUP</gitup:fileRequirement>
+        <gitup:improvement>Implementar a front-end e back-end para catalogar os códigos (possivelmente extrair algumas informações diretamente do código, como: linguagem, banco de dados etc.)</gitup:improvement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Site_Gitup -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Site_Gitup">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <gitup:url>http://gitup.com.br</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Web_Semântica -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Web_Semântica">
+        <skos:prefLabel>Web Semântica</skos:prefLabel>
     </owl:NamedIndividual>
     
 
