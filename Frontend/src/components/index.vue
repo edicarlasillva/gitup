@@ -4,10 +4,10 @@
       <div class="wrap-search">
         <section class="hero">
           <div class="container">
-            <h1 class="title title--alter is-size-1">Repositório de projetos UFBA</h1>
+            <h1 class="title title--alter is-size-1">Repositório GitUP</h1>
             <p class="subtitle subtitle--alter">
-              Digite uma palavra-chave para buscar projetos de software na nossa
-              base
+              Uma curadoria de projetos de software da UFBA para você
+              <br />explorar, se inspirar, reusar e compartilhar. Tudo em um só lugar!
             </p>
           </div>
         </section>
@@ -27,11 +27,22 @@
                 <strong>Ideias de projetos</strong>
               </p>
               <p class="subtitle subtitle--alter is-6">
-                Designed for
-                <strong>mobile</strong> first
+                Use o
+                <strong>GitUP</strong> para encontrar os melhores projetos de software para evoluir
               </p>
             </div>
-
+            <div class="bd-focus-item column has-text-centered">
+              <span class="icon-section">
+                <i class="fab fa-github"></i>
+              </span>
+              <p class="title is-4">
+                <strong>Reuso de software</strong>
+              </p>
+              <p class="subtitle subtitle--alter is-6">
+                Torne seu
+                <strong>fluxo</strong> de desenvolvimento de software mais rápido, fácil e assertivo
+              </p>
+            </div>
             <div class="bd-focus-item column has-text-centered">
               <span class="icon-section">
                 <i class="fas fa-code-branch"></i>
@@ -40,21 +51,8 @@
                 <strong>Contribuições</strong>
               </p>
               <p class="subtitle subtitle--alter is-6">
-                Open source on
-                <strong>GitHub</strong>
-              </p>
-            </div>
-
-            <div class="bd-focus-item column has-text-centered">
-              <span class="icon-section">
-                <i class="fab fa-github"></i>
-              </span>
-              <p class="title is-4">
-                <strong>Reuso</strong>
-              </p>
-              <p class="subtitle subtitle--alter is-6">
-                Open source on
-                <strong>GitHub</strong>
+                Construa uma
+                <strong>comunidade</strong> de discentes engajados em ajudar uns aos outros
               </p>
             </div>
           </div>

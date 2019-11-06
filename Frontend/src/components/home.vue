@@ -20,18 +20,7 @@
             </div>
             <div id="navbarMenuHeroA" class="navbar-menu">
               <div class="navbar-end">
-                <a
-                  href="https://github.com/edicarlasillva/gitup"
-                  class="navbar-item"
-                >Sobre o projeto</a>
-                <!-- <span class="navbar-item">
-                  <button class="button button--alter is-link">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Contribuir</span>
-                  </button>
-                </span>-->
+                <a href="https://github.com/edicarlasillva/gitup" class="navbar-item">Sobre o GitUP</a>
               </div>
             </div>
           </div>
@@ -70,12 +59,14 @@
               <div class="has-text-centered">
                 <div class="content">
                   © 2019 Todos os direitos reservados.
-                  <br />Desenvolvido por
-                  <a
-                    href="https://github.com/edicarlasillva"
-                    title="Github"
-                    target="_blank"
-                  >@edicarlasillva</a>
+                  <p>
+                    Trabalho de conclusão de curso -
+                    <a
+                      href="https://www.ufba.br/"
+                      title="Site UFBA"
+                      target="_blank"
+                    >UFBA</a>
+                  </p>
                 </div>
               </div>
             </div>
