@@ -198,11 +198,22 @@ SELECT distinct ?name ?revision ?created ?description
 WHERE 
 {
   ?project doap:name ?name .
-  
   OPTIONAL { ?project doap:release ?version }
-  OPTIONAL { ?version doap:revision ?revision }
-  OPTIONAL { ?version doap:created ?created }
-  OPTIONAL { ?version doap:description ?description }
+  OPTIONAL 
+  {
+    ?project doap:release ?version .
+    ?version doap:revision ?revision
+  }
+  OPTIONAL 
+  { 
+    ?project doap:release ?version .
+    ?version doap:created ?created 
+  }
+  OPTIONAL 
+  { 
+    ?project doap:release ?version .
+    ?version doap:description ?description 
+  }
   Filter REGEX(?name , 'Melhoria do GuideAutomator' , 'i')
 } 
 
