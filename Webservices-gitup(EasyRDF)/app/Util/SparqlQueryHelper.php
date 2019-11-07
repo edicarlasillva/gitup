@@ -82,21 +82,33 @@ abstract class  SparqlQueryHelper extends Model{
 
    protected function GetVersionProject($sparkClient,$project){
 
-        $query = "
+       $query = "
        SELECT distinct ?name ?revision ?created ?description
         WHERE 
         {
         ?project doap:name ?name .
-        
         OPTIONAL { ?project doap:release ?version }
-        OPTIONAL { ?version doap:revision ?revision }
-        OPTIONAL { ?version doap:created ?created }
-        OPTIONAL { ?version doap:description ?description }
+        OPTIONAL 
+        {
+            ?project doap:release ?version .
+            ?version doap:revision ?revision
+        }
+        OPTIONAL 
+        { 
+            ?project doap:release ?version .
+            ?version doap:created ?created 
+        }
+        OPTIONAL 
+        { 
+            ?project doap:release ?version .
+            ?version doap:description ?description 
+        }
         Filter REGEX(?name , '$project' , 'i')
         } 
         ";
         $result = $sparkClient->query($query);
         $version = [];
+        
         foreach($result as $row){
            $version['revision'] = property_exists($row ,"revision") === true ? $row->revision->getValue():null;
            $version['created'] = property_exists($row ,"created") === true ? $row->created->getValue():null;
@@ -257,26 +269,27 @@ abstract class  SparqlQueryHelper extends Model{
     private function GetChildCategories($sparkClient,$project){
 
         $query = "
-        SELECT distinct ?name ?narrower
-        WHERE
-        {
-        ?project doap:name ?name .
+        SELECT distinct 
+        ?name ?prefLabel 
+        WHERE 
+        { 
+        ?project doap:name ?name . 
         OPTIONAL 
-        {
-            ?project gitup:category ?category .
-            ?category skos:narrower ?narrower .
-        }
-
-        Filter REGEX(?name , '$project' , 'i')
-        }
+        { 
+            ?project gitup:category ?category . 
+            ?category skos:narrower ?narrower . 
+            ?narrower skos:prefLabel ?prefLabel .
+        } 
+        Filter REGEX(?name , '$project' , 'i') 
+        } 
        ";
 
          $result = $sparkClient->query($query);
          $childCategories = [];
 
          foreach($result as $row){
-             if(property_exists($row,"narrower")){
-                 $childCategories[] = $row->narrower->getValue();
+             if(property_exists($row,"prefLabel")){
+                 $childCategories[] = $row->prefLabel->getValue();
              }
          }
 
@@ -287,26 +300,28 @@ abstract class  SparqlQueryHelper extends Model{
 
    private function GetMotherCategories($sparkClient,$project){
          $query = "
-        SELECT distinct ?name ?broader
-        WHERE
-        {
-        ?project doap:name ?name .
-        OPTIONAL 
-        { 
-            ?project gitup:category ?category .
-            ?category skos:broader ?broader .
-        }
-
-        Filter REGEX(?name , '$project' , 'i')
-        }
+         SELECT distinct 
+         ?name ?prefLabel 
+         WHERE 
+         { 
+           ?project doap:name ?name . 
+           OPTIONAL 
+           { 
+             ?project gitup:category ?category . 
+             ?category skos:broader ?broader . 
+             ?broader skos:prefLabel ?prefLabel .
+           } 
+           Filter REGEX(?name , '$project' , 'i') 
+         } 
        ";
 
          $result = $sparkClient->query($query);
          $motherCategories = [];
+       
 
          foreach($result as $row){
-             if(property_exists($row,"broader")){
-                 $motherCategories[] = $row->broader->getValue();
+             if(property_exists($row,"prefLabel")){
+                 $motherCategories[] = $row->prefLabel->getValue();
              }
          }
 
@@ -315,18 +330,19 @@ abstract class  SparqlQueryHelper extends Model{
 
     private function GetRelatedCategories($sparkClient,$project){
          $query = "
-       SELECT distinct ?name ?related
-        WHERE
-        {
-        ?project doap:name ?name .
-        OPTIONAL 
-        { 
-            ?project gitup:category ?category .
-            ?category skos:related ?related .
-        }
-
-        Filter REGEX(?name , '$project' , 'i')
-        }
+         SELECT distinct 
+         ?name ?prefLabel 
+         WHERE 
+         { 
+           ?project doap:name ?name . 
+           OPTIONAL 
+           { 
+             ?project gitup:category ?category . 
+             ?category skos:related ?related . 
+             ?related skos:prefLabel ?prefLabel .
+           } 
+           Filter REGEX(?name , '$project' , 'i') 
+         } 
 
        ";
 
@@ -334,8 +350,8 @@ abstract class  SparqlQueryHelper extends Model{
          $relatedCategories = [];
 
          foreach($result as $row){
-             if(property_exists($row,"related")){
-                 $relatedCategories[] = $row->related->getValue();
+             if(property_exists($row,"prefLabel")){
+                 $relatedCategories[] = $row->prefLabel->getValue();
              }
          }
 
@@ -527,10 +543,4 @@ abstract class  SparqlQueryHelper extends Model{
          return $requirement;
 
    }
-
-
-
-
-
-
 }
