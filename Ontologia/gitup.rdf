@@ -1225,13 +1225,14 @@ PostgreSQL</doap:description>
         <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
         <gitup:category rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Dados_Conectados"/>
         <gitup:monografia rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Monografia_Gitup"/>
-        <gitup:requirements rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Repositório_Gitup"/>
+        <gitup:requirements rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Requisito_Gitup"/>
         <doap:developer rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
         <doap:documenter rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
         <doap:helper rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gabriela_Mota"/>
         <doap:homepage rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Site_Gitup"/>
         <doap:implements rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Implementação_Gitup"/>
         <doap:maintainer rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
+        <doap:release rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Versão_Gitup"/>
         <doap:repository rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Repositório_Gitup"/>
         <doap:tester rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
         <doap:translator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>

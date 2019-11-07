@@ -308,7 +308,7 @@ WHERE
 ORDER BY DESC(?os)
 
 # Requisito
-SELECT distinct ?name ?file ?improvement
+SELECT distinct ?name ?fileRequirement ?improvement
 WHERE 
 {
   ?project doap:name ?name .
@@ -316,7 +316,7 @@ WHERE
   OPTIONAL 
   {
     ?project gitup:requirements ?requirements .
-    ?requirements gitup:file ?file 
+    ?requirements gitup:fileRequirement ?fileRequirement 
   }
   OPTIONAL 
   { 
