@@ -1297,9 +1297,9 @@ Composer
         <rdf:type rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Monografia"/>
         <gitup:advisor rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Frederico_Araújo_Durão"/>
         <gitup:coadvisor rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Gabriela_Mota"/>
-        <dc:creator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
         <gitup:url>http://bit.ly/MonografiaEdicarla</gitup:url>
         <dc:language>pt</dc:language>
+        <dc:creator rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Edicarla_Conceição_da_Silva"/>
     </owl:NamedIndividual>
     
 
@@ -1337,6 +1337,17 @@ Composer
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Site_Gitup">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <gitup:url>http://gitup.com.br</gitup:url>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Versão_Gitup -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Versão_Gitup">
+        <rdf:type rdf:resource="http://usefulinc.com/ns/doap#Version"/>
+        <doap:created>07/11/2019</doap:created>
+        <doap:description>Versão inicial do projeto.</doap:description>
+        <doap:revision>1.0.0</doap:revision>
     </owl:NamedIndividual>
     
 
