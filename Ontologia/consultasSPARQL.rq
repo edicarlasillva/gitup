@@ -436,3 +436,47 @@ WHERE
 }
 
 ORDER BY DESC(?name) 
+
+
+# Categorias mãe, filhas e relacionadas
+SELECT distinct 
+?name ?prefLabel 
+WHERE 
+{ 
+  ?project doap:name ?name . 
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category . 
+    ?category skos:broader ?broader . 
+    ?broader skos:prefLabel ?prefLabel .
+  } 
+  Filter REGEX(?name , 'Um framework baseado em ontologias linked data para repositório de projetos de software' , 'i') 
+} 
+
+SELECT distinct 
+?name ?prefLabel 
+WHERE 
+{ 
+  ?project doap:name ?name . 
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category . 
+    ?category skos:narrower ?narrower . 
+    ?narrower skos:prefLabel ?prefLabel .
+  } 
+  Filter REGEX(?name , 'Um framework baseado em ontologias linked data para repositório de projetos de software' , 'i') 
+} 
+
+SELECT distinct 
+?name ?prefLabel 
+WHERE 
+{ 
+  ?project doap:name ?name . 
+  OPTIONAL 
+  { 
+    ?project gitup:category ?category . 
+    ?category skos:related ?related . 
+    ?related skos:prefLabel ?prefLabel .
+  } 
+  Filter REGEX(?name , 'Um framework baseado em ontologias linked data para repositório de projetos de software' , 'i') 
+} 
