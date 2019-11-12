@@ -164,16 +164,6 @@
     
 
 
-    <!-- http://ontologia.gitup.com.br:8890/gitup#author -->
-
-    <owl:ObjectProperty rdf:about="http://ontologia.gitup.com.br:8890/gitup#author">
-        <rdfs:domain rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Requirement"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:label xml:lang="pt">autor do requisito</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://ontologia.gitup.com.br:8890/gitup#category -->
 
     <owl:ObjectProperty rdf:about="http://ontologia.gitup.com.br:8890/gitup#category">
@@ -473,16 +463,6 @@
 
     <owl:DatatypeProperty rdf:about="http://ontologia.gitup.com.br:8890/gitup#url">
         <rdfs:label xml:lang="pt">url</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ontologia.gitup.com.br:8890/gitup#versionRequirement -->
-
-    <owl:DatatypeProperty rdf:about="http://ontologia.gitup.com.br:8890/gitup#versionRequirement">
-        <rdfs:domain rdf:resource="http://ontologia.gitup.com.br:8890/gitup#Requirement"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:label xml:lang="pt">versão do requisito</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1356,6 +1336,7 @@ Composer
     <!-- http://www.co-ode.org/ontologies/ont.owl#Web_Semântica -->
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Web_Semântica">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>Web Semântica</skos:prefLabel>
     </owl:NamedIndividual>
     
